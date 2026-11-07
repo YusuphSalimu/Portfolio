@@ -1,17 +1,24 @@
+import Link from "next/link";
+import ProjectGrid from "@/components/projects/ProjectGrid";
+import { getFeaturedProjects } from "@/lib/projects";
+
 export default function Home() {
+  const projects = getFeaturedProjects().slice(0, 3);
+
   return (
-    <main className="flex min-h-screen items-center justify-center px-6 py-16">
-      <section className="glass-surface w-full max-w-2xl rounded-3xl p-8 text-center shadow-glow sm:p-14">
-        <h1 className="font-sans text-4xl font-semibold tracking-tight sm:text-6xl">
-          Yusuph Salimu
-        </h1>
-        <p className="mt-4 font-mono text-base text-muted-foreground sm:text-lg">
-          Software Engineer &amp; Full-Stack Developer
-        </p>
-        <div
-          aria-hidden="true"
-          className="mx-auto mt-10 h-1 w-32 rounded-full bg-accent-gradient"
-        />
+    <main className="page-shell home-projects">
+      <section aria-labelledby="selected-work-title">
+        <header className="page-heading">
+          <p className="eyebrow">Portfolio / Selected work</p>
+          <h1 id="selected-work-title">Selected Work</h1>
+          <p>Thoughtful software, data, and product work built to solve real problems.</p>
+        </header>
+        <ProjectGrid projects={projects} />
+        <div className="home-projects__all">
+          <Link className="button button--primary" href="/projects">
+            View all projects <span aria-hidden="true">→</span>
+          </Link>
+        </div>
       </section>
     </main>
   );

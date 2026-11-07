@@ -1,0 +1,23 @@
+# Project Intake Checklist
+
+- [ ] Project name
+- [ ] One-line summary (160 characters maximum)
+- [ ] Category: web, data-ml, saas, competition, or mobile
+- [ ] Status: live, case-study, or competition
+- [ ] Role
+- [ ] Technology stack (at least one item)
+- [ ] Project year
+- [ ] Live URL (if applicable)
+- [ ] GitHub repository URL (if applicable)
+- [ ] Client name and location (if applicable)
+- [ ] Client consent to publish their name
+- [ ] Client consent to publish their logo
+- [ ] Hero image (1600×900 WebP, under 500 KB, with alt text)
+- [ ] Screenshot list (each under 500 KB, with alt text)
+- [ ] Demo video (optional, under 10 MB)
+- [ ] Metrics and proof for each metric
+- [ ] Project features
+- [ ] Problem write-up
+- [ ] Solution write-up
+- [ ] Results write-up
+- [ ] Confirm every public claim is accurate and approved
