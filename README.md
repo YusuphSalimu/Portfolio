@@ -1,15 +1,18 @@
 # Yusuph Salimu Portfolio
 
-A Next.js foundation for the portfolio of Yusuph Salimu, Software Engineer and Full-Stack Developer.
+Software engineer building web platforms, business websites, and backend systems.
 
-Live site: https://yusuph-portfolio.vercel.app
+Live site: [https://yusuph-portfolio.vercel.app](https://yusuph-portfolio.vercel.app)
 
-## Stack
+![Portfolio preview](./public/images/social-preview.png)
 
-- Next.js 15 App Router
-- React and TypeScript
-- Tailwind CSS 4
-- Vitest
+## Tech stack
+
+- **Framework:** Next.js 15 (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS 4
+- **Testing:** Vitest
+- **Content:** MDX-powered project content
 
 ## Getting started
 
@@ -19,8 +22,10 @@ npm run dev
 npm run build
 ```
 
-<!-- TODO: Add a screenshot once the homepage is implemented. -->
+## Adding a project
+
+See [docs/ADDING-A-PROJECT.md](./docs/ADDING-A-PROJECT.md) for the guided workflow for adding a new case study.
 
 ## License
 
-MIT. See [LICENSE](./LICENSE).
+This project is licensed under the MIT License. See [LICENSE](./LICENSE).

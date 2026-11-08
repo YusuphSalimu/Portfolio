@@ -56,7 +56,7 @@ export const projects: Project[] = [
     summary:
       "Industrial hardware e-commerce and catalog platform for Tanzania's infrastructure sector, with mobile-first design and fast loading on mobile networks.",
     role: "Project developer",
-    stack: ["React", "Vite", "Tailwind CSS", "Vercel"],
+    stack: ["React", "Tailwind CSS", "Vercel"],
     // TODO: UNVERIFIED legacy claims; verify before display: ISO-certified, M-Pesa, Airtel Money, Selcom Pay, and Mix By Yas.
     features: [
       "Industrial catalog preview",
@@ -86,7 +86,7 @@ export const projects: Project[] = [
       "time series analysis",
     ],
     features: [],
-    liveUrl: "https://tanzania-stock-frontend.onrender.com",
+    liveUrl: "https://tanzania-stock-ai.vercel.app",
     repoUrl: "https://github.com/YusuphSalimu/tanzania-stock-ai",
     status: "live",
     media: [],
