@@ -1,0 +1,159 @@
+// Machine translation. Pending native review.
+{
+  "nav": {
+    "logo": "yusuph.dev",
+    "about": "Kuhusu",
+    "skills": "Ujuzi",
+    "projects": "Miradi",
+    "experience": "Uzoefu",
+    "contact": "Wasiliana",
+    "connect": "Wasiliana Nasi",
+    "language": "Lugha"
+  },
+  "hero": {
+    "availability": "Inapatikana kwa kazi ya kujitegemea na kazi ya mbali",
+    "greeting": "Habari, mimi ni Yusuph Salimu.",
+    "subtitle": "Mhandisi wa programu anajenga mifumo ya wavuti, tovuti za biashara, na mifumo ya nyuma, pamoja na data na mafunzo ya mashine inapohitajika, kwa wateja nchini Tanzania na duniani.",
+    "work": "Tazama kazi zangu",
+    "contact": "Tujenge pamoja",
+    "cv": "Pakua CV",
+    "terminalWhoami": "Yusuph Salimu",
+    "terminalLocation": "Dodoma, Tanzania",
+    "terminalStatus": "huru kwa kazi ya kujitegemea & ya mbali",
+    "terminalStack": "TypeScript · Next.js · Django"
+  },
+  "impact": {
+    "title": "Tovuti 3 za wateja zilizopo",
+    "languages": "Lugha 3 za tovuti (EN · SW · FR)",
+    "location": "Dodoma, Tanzania",
+    "remote": "Kikamilifu kwa mbali"
+  },
+  "about": {
+    "eyebrow": "Kuhusu",
+    "title": "Mhandisi wa programu mwenye fikra ya bidhaa.",
+    "description": "Najenga bidhaa za kidijitali zilizo na muonekano mzuri kwa biashara ndogo na timu zinazokua. Kazi yangu inachukua sehemu ya fikra ya bidhaa, uhandisi wa sehemu ya mbele, maendeleo ya nyuma, na workflows za data, kwa kuzingatia uwazi, utendaji, na kudumu kwa muda mrefu.",
+    "education": "BSc Software Engineering, Chuo Kikuu cha Dodoma, Oktoba 2023 – Julai 2027 (inatarajiwa). Nimechaguliwa kwa mafunzo ya Huawei ICT Academy katika kompyuta ya wingu na AI."
+  },
+  "services": {
+    "eyebrow": "Huduma",
+    "title": "Ninachosaidia timu kujenga",
+    "items": [
+      "Tovuti za biashara na katalogi",
+      "Mifumo ya wavuti na uthibitishaji",
+      "API za backend na SaaS",
+      "Data & machine learning"
+    ],
+    "footnote": "Upangishaji wa hosting, deployment, DNS, na SSL umejumuishwa."
+  },
+  "process": {
+    "eyebrow": "Mchakato",
+    "title": "Njia wazi kutoka kwa wazo hadi uzinduzi",
+    "discover": "Gundua — Ninalinganisha malengo ya biashara, mahitaji ya watumiaji, na vikwazo vya kiufundi.",
+    "build": "Jenga — Ninafanya muundo na utekelezaji wa bidhaa kwa hatua ndogo zinazoweza kuthibitishwa.",
+    "launch": "Uzinduzi — Ninatibu deployment, DNS, ukaguzi wa mazingira, na utayari wa kutolewa.",
+    "support": "Msaada — Naendelea karibu baada ya uzinduzi kurekebisha matatizo, kuboresha utendaji, na kurudia." 
+  },
+  "selectedWork": {
+    "eyebrow": "Kazi zilizochaguliwa",
+    "title": "Miradi iliyochaguliwa",
+    "viewAll": "Tazama miradi yote"
+  },
+  "experience": {
+    "eyebrow": "Uzoefu & elimu",
+    "title": "Uzoefu",
+    "clientProjects": "Mhandisi wa Programu, Miradi ya Wateja wa Kujitegemea",
+    "clientMeta": "Sep 2026 – Hivi sasa · Mbali / Tanzania",
+    "clientBody": "Nilitengeneza tovuti tatu za biashara zilizotumika kwa wateja wanaolipa. Niliongoza majadiliano ya mahitaji, kupanga, utekelezaji, upimaji, na uzinduzi. Niliendesha hazina za GitHub na deployments za moja kwa moja, ikijumuisha usanidi wa hosting na kutatua matatizo.",
+    "educationTitle": "Chuo Kikuu cha Dodoma",
+    "educationMeta": "Oktoba 2023 – Julai 2027 · BSc Software Engineering",
+    "educationBody": "Nimechaguliwa kwa mafunzo ya Huawei ICT Academy katika kompyuta ya wingu na AI."
+  },
+  "skills": {
+    "eyebrow": "Ujuzi",
+    "title": "Uwezo",
+    "frontend": "Mbele",
+    "backend": "Nyuma",
+    "data": "Data & ML",
+    "databases": "Databases",
+    "devops": "DevOps & Zana",
+    "commerce": "Wavuti & Biashara",
+    "list": [
+      "TypeScript",
+      "JavaScript",
+      "Python",
+      "Java",
+      "C++",
+      "SQL",
+      "HTML5",
+      "CSS3",
+      "Next.js",
+      "React",
+      "Angular",
+      "Django",
+      "Node.js",
+      "Express.js",
+      "Spring Boot",
+      "REST APIs",
+      "Celery",
+      "PostgreSQL",
+      "MySQL",
+      "MongoDB",
+      "Supabase",
+      "Redis",
+      "Headless WordPress",
+      "WooCommerce integrations",
+      "SEO-conscious websites",
+      "Git",
+      "GitHub",
+      "GitHub Actions",
+      "CI/CD workflows",
+      "DNS/SSL configuration",
+      "VS Code",
+      "Pandas",
+      "NumPy",
+      "scikit-learn",
+      "Jupyter Notebook",
+      "Data cleaning",
+      "Predictive modeling"
+    ]
+  },
+  "certificates": {
+    "eyebrow": "Vyeti & Lugha",
+    "title": "Vyeti",
+    "languageTitle": "Lugha",
+    "languages": [
+      "Kiswahili (bilingual)",
+      "English (professional working)",
+      "Arabic (conversational)"
+    ]
+  },
+  "testimonials": {
+    "title": "Marejeleo",
+    "empty": "Hakuna marejeleo yaliyowekwa bado."
+  },
+  "contact": {
+    "eyebrow": "Wasiliana",
+    "title": "Tujenge pamoja.",
+    "name": "Jina",
+    "email": "Barua pepe",
+    "projectType": "Aina ya mradi",
+    "budget": "Kikomo cha bajeti (hiari)",
+    "message": "Ujumbe",
+    "submit": "Tuma kuuliza",
+    "honeypot": "Acha hii wazi",
+    "emailLabel": "Barua pepe",
+    "phoneLabel": "Simu",
+    "linkedinLabel": "LinkedIn",
+    "githubLabel": "GitHub",
+    "success": "Asante. Ujumbe wako umewekwa kwenye ukaguzi.",
+    "error": "Kumetokea tatizo wakati wa kutuma ujumbe wako."
+  },
+  "footer": {
+    "name": "Yusuph Salimu",
+    "tag": "Mhandisi wa programu anajenga bidhaa za kidijitali kwa biashara za kweli.",
+    "rights": "© 2026 Yusuph Salimu. Haki zote zimehifadhiwa."
+  },
+  "page": {
+    "noteEnglish": "Miradi ya kisa inaendelea kwa Kiingereza katika lugha zote."
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "nav": {
+    "logo": "yusuph.dev",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "experience": "Experience",
+    "contact": "Contact",
+    "connect": "Let's Connect",
+    "language": "Language"
+  },
+  "hero": {
+    "availability": "Available for freelance & remote work",
+    "greeting": "Hi, I'm Yusuph Salimu.",
+    "subtitle": "Software engineer building web platforms, business websites, and backend systems, with data and machine learning when needed, for clients in Tanzania and worldwide.",
+    "work": "View my work",
+    "contact": "Let's work together",
+    "cv": "Download CV",
+    "terminalWhoami": "Yusuph Salimu",
+    "terminalLocation": "Dodoma, Tanzania",
+    "terminalStatus": "open to freelance & remote work",
+    "terminalStack": "TypeScript · Next.js · Django"
+  },
+  "impact": {
+    "title": "3 live client websites",
+    "languages": "3 site languages (EN · SW · FR)",
+    "location": "Dodoma, Tanzania",
+    "remote": "Remote-ready"
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "Software engineer with a product mindset.",
+    "description": "I build polished digital products for small businesses and growing teams. My work sits across product thinking, frontend engineering, backend development, and data workflows, with an emphasis on clarity, performance, and long-term maintainability.",
+    "education": "BSc Software Engineering, University of Dodoma, Oct 2023 – Jul 2027 (expected). Selected for Huawei ICT Academy training in cloud computing and AI."
+  },
+  "services": {
+    "eyebrow": "Services",
+    "title": "What I help teams build",
+    "items": [
+      "Business websites & catalogues",
+      "Web platforms & authentication",
+      "Backend APIs & SaaS",
+      "Data & machine learning"
+    ],
+    "footnote": "Hosting, deployment, DNS, and SSL setup included."
+  },
+  "process": {
+    "eyebrow": "Process",
+    "title": "A clear path from idea to launch",
+    "discover": "Discover — I align on business goals, user needs, and technical constraints.",
+    "build": "Build — I design and implement the product in small, verifiable milestones.",
+    "launch": "Launch — I handle deployment, DNS, environment checks, and release readiness.",
+    "support": "Support — I stay close after launch to fix issues, optimize performance, and iterate."
+  },
+  "selectedWork": {
+    "eyebrow": "Selected work",
+    "title": "Selected projects",
+    "viewAll": "View all projects"
+  },
+  "experience": {
+    "eyebrow": "Experience & education",
+    "title": "Experience",
+    "clientProjects": "Software Engineer, Independent Client Projects",
+    "clientMeta": "Sep 2026 – Present · Remote / Tanzania",
+    "clientBody": "Delivered three production business websites for paying clients. Led requirements discussions, planning, implementation, testing, and launch. Managed GitHub repositories and live deployments, including hosting configuration and troubleshooting.",
+    "educationTitle": "University of Dodoma",
+    "educationMeta": "Oct 2023 – Jul 2027 · BSc Software Engineering",
+    "educationBody": "Selected for Huawei ICT Academy training in cloud computing and AI."
+  },
+  "skills": {
+    "eyebrow": "Skills",
+    "title": "Capabilities",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "data": "Data & ML",
+    "databases": "Databases",
+    "devops": "DevOps & Tools",
+    "commerce": "Web & Commerce",
+    "list": [
+      "TypeScript",
+      "JavaScript",
+      "Python",
+      "Java",
+      "C++",
+      "SQL",
+      "HTML5",
+      "CSS3",
+      "Next.js",
+      "React",
+      "Angular",
+      "Django",
+      "Node.js",
+      "Express.js",
+      "Spring Boot",
+      "REST APIs",
+      "Celery",
+      "PostgreSQL",
+      "MySQL",
+      "MongoDB",
+      "Supabase",
+      "Redis",
+      "Headless WordPress",
+      "WooCommerce integrations",
+      "SEO-conscious websites",
+      "Git",
+      "GitHub",
+      "GitHub Actions",
+      "CI/CD workflows",
+      "DNS/SSL configuration",
+      "VS Code",
+      "Pandas",
+      "NumPy",
+      "scikit-learn",
+      "Jupyter Notebook",
+      "Data cleaning",
+      "Predictive modeling"
+    ]
+  },
+  "certificates": {
+    "eyebrow": "Certificates & languages",
+    "title": "Certificates",
+    "languageTitle": "Languages",
+    "languages": [
+      "Kiswahili (bilingual)",
+      "English (professional working)",
+      "Arabic (conversational)"
+    ]
+  },
+  "testimonials": {
+    "title": "Testimonials",
+    "empty": "No testimonials added yet."
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Let's work together.",
+    "name": "Name",
+    "email": "Email",
+    "projectType": "Project type",
+    "budget": "Budget range (optional)",
+    "message": "Message",
+    "submit": "Send inquiry",
+    "honeypot": "Leave this blank",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "linkedinLabel": "LinkedIn",
+    "githubLabel": "GitHub",
+    "success": "Thank you. Your message has been queued for review.",
+    "error": "Something went wrong while sending your message."
+  },
+  "footer": {
+    "name": "Yusuph Salimu",
+    "tag": "Software engineer building digital products for real businesses.",
+    "rights": "© 2026 Yusuph Salimu. All rights reserved."
+  },
+  "page": {
+    "noteEnglish": "Project case studies stay in English in all locales."
+  }
+}

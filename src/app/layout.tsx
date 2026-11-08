@@ -1,34 +1,57 @@
 import type { Metadata } from "next";
 import { Archivo, JetBrains_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 const archivo = Archivo({
   variable: "--font-archivo",
   subsets: ["latin"],
-  weight: "variable",
+  weight: ["400", "500", "600", "700"],
 });
 
 const jetBrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
   subsets: ["latin"],
-  weight: "400",
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://yusuph-portfolio.vercel.app"),
-  title: "Yusuph Salimu — Software Engineer & Full-Stack Developer",
-  description: "Personal portfolio of Yusuph Salimu, Software Engineer and Full-Stack Developer.",
+  title: {
+    default: "Yusuph Salimu — Software Engineer | Full-Stack Developer",
+    template: "%s | Yusuph Salimu",
+  },
+  description: "Software engineer building web platforms, business websites, and backend systems for clients in Tanzania and worldwide.",
+  alternates: {
+    canonical: "/",
+    languages: {
+      en: "/en",
+      sw: "/sw",
+      fr: "/fr",
+    },
+  },
+  openGraph: {
+    type: "website",
+    siteName: "Yusuph Salimu",
+    url: "https://yusuph-portfolio.vercel.app",
+    images: [{ url: "/images/social-preview.png", width: 1280, height: 640, alt: "Yusuph Salimu" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Yusuph Salimu — Software Engineer | Full-Stack Developer",
+    description: "Software engineer building web platforms, business websites, and backend systems.",
+    images: ["/images/social-preview.png"],
+  },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${archivo.variable} ${jetBrainsMono.variable} antialiased`}>
         {children}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

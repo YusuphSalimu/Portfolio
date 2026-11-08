@@ -1,0 +1,159 @@
+// Machine translation. Pending native review.
+{
+  "nav": {
+    "logo": "yusuph.dev",
+    "about": "À propos",
+    "skills": "Compétences",
+    "projects": "Projets",
+    "experience": "Expérience",
+    "contact": "Contact",
+    "connect": "Contactez-moi",
+    "language": "Langue"
+  },
+  "hero": {
+    "availability": "Disponible pour du freelance et du travail à distance",
+    "greeting": "Bonjour, je suis Yusuph Salimu.",
+    "subtitle": "Ingénieur logiciel qui construit des plateformes web, des sites d'entreprise et des systèmes backend, avec des données et de l'apprentissage automatique selon les besoins, pour des clients en Tanzanie et dans le monde.",
+    "work": "Voir mes travaux",
+    "contact": "Travaillons ensemble",
+    "cv": "Télécharger le CV",
+    "terminalWhoami": "Yusuph Salimu",
+    "terminalLocation": "Dodoma, Tanzanie",
+    "terminalStatus": "ouvert au freelance & au télétravail",
+    "terminalStack": "TypeScript · Next.js · Django"
+  },
+  "impact": {
+    "title": "3 sites client en ligne",
+    "languages": "3 langues du site (EN · SW · FR)",
+    "location": "Dodoma, Tanzanie",
+    "remote": "Prêt pour le télétravail"
+  },
+  "about": {
+    "eyebrow": "À propos",
+    "title": "Ingénieur logiciel avec une sensibilité produit.",
+    "description": "Je construis des produits numériques élégants pour les petites entreprises et les équipes en croissance. Mon travail s'étend à la réflexion produit, au développement frontend, au développement backend et aux flux de données, avec un souci de clarté, de performance et de maintenabilité à long terme.",
+    "education": "BSc Software Engineering, Université de Dodoma, oct. 2023 – juil. 2027 (expected). Sélectionné pour la formation Huawei ICT Academy en cloud computing et IA."
+  },
+  "services": {
+    "eyebrow": "Services",
+    "title": "Ce que je peux aider à construire",
+    "items": [
+      "Sites web d'entreprise et catalogues",
+      "Plateformes web et authentification",
+      "APIs backend et SaaS",
+      "Données et apprentissage automatique"
+    ],
+    "footnote": "L'hébergement, le déploiement, le DNS et la configuration SSL sont inclus."
+  },
+  "process": {
+    "eyebrow": "Processus",
+    "title": "Un chemin clair de l'idée au lancement",
+    "discover": "Découvrir — J'aligne les objectifs métier, les besoins utilisateurs et les contraintes techniques.",
+    "build": "Construire — Je conçois et mets en œuvre le produit par étapes vérifiables.",
+    "launch": "Lancement — Je gère le déploiement, le DNS, les vérifications d'environnement et la préparation de la mise en production.",
+    "support": "Support — Je reste proche après le lancement pour corriger les problèmes, optimiser les performances et itérer."
+  },
+  "selectedWork": {
+    "eyebrow": "Travaux sélectionnés",
+    "title": "Projets sélectionnés",
+    "viewAll": "Voir tous les projets"
+  },
+  "experience": {
+    "eyebrow": "Expérience & éducation",
+    "title": "Expérience",
+    "clientProjects": "Ingénieur logiciel, Projets clients indépendants",
+    "clientMeta": "Sep 2026 – Présent · À distance / Tanzanie",
+    "clientBody": "J'ai livré trois sites web de production pour des clients payants. J'ai dirigé les discussions sur les besoins, la planification, la mise en œuvre, les tests et le lancement. J'ai géré les dépôts GitHub et les déploiements en direct, y compris la configuration d'hébergement et la résolution des problèmes.",
+    "educationTitle": "Université de Dodoma",
+    "educationMeta": "Oct 2023 – Juil 2027 · BSc Software Engineering",
+    "educationBody": "Sélectionné pour la formation Huawei ICT Academy en cloud computing et IA."
+  },
+  "skills": {
+    "eyebrow": "Compétences",
+    "title": "Capacités",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "data": "Données & IA",
+    "databases": "Bases de données",
+    "devops": "DevOps & Outils",
+    "commerce": "Web & Commerce",
+    "list": [
+      "TypeScript",
+      "JavaScript",
+      "Python",
+      "Java",
+      "C++",
+      "SQL",
+      "HTML5",
+      "CSS3",
+      "Next.js",
+      "React",
+      "Angular",
+      "Django",
+      "Node.js",
+      "Express.js",
+      "Spring Boot",
+      "REST APIs",
+      "Celery",
+      "PostgreSQL",
+      "MySQL",
+      "MongoDB",
+      "Supabase",
+      "Redis",
+      "Headless WordPress",
+      "WooCommerce integrations",
+      "SEO-conscious websites",
+      "Git",
+      "GitHub",
+      "GitHub Actions",
+      "CI/CD workflows",
+      "DNS/SSL configuration",
+      "VS Code",
+      "Pandas",
+      "NumPy",
+      "scikit-learn",
+      "Jupyter Notebook",
+      "Data cleaning",
+      "Predictive modeling"
+    ]
+  },
+  "certificates": {
+    "eyebrow": "Certificats & langues",
+    "title": "Certificats",
+    "languageTitle": "Langues",
+    "languages": [
+      "Kiswahili (bilingue)",
+      "English (professionnel)",
+      "Arabic (conversationnel)"
+    ]
+  },
+  "testimonials": {
+    "title": "Témoignages",
+    "empty": "Aucun témoignage ajouté pour le moment."
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Travaillons ensemble.",
+    "name": "Nom",
+    "email": "E-mail",
+    "projectType": "Type de projet",
+    "budget": "Budget (facultatif)",
+    "message": "Message",
+    "submit": "Envoyer",
+    "honeypot": "Laissez ce champ vide",
+    "emailLabel": "E-mail",
+    "phoneLabel": "Téléphone",
+    "linkedinLabel": "LinkedIn",
+    "githubLabel": "GitHub",
+    "success": "Merci. Votre message a été mis en file d'attente pour vérification.",
+    "error": "Une erreur s'est produite lors de l'envoi de votre message."
+  },
+  "footer": {
+    "name": "Yusuph Salimu",
+    "tag": "Ingénieur logiciel qui construit des produits numériques pour de vraies entreprises.",
+    "rights": "© 2026 Yusuph Salimu. Tous droits réservés."
+  },
+  "page": {
+    "noteEnglish": "Les études de cas restent en anglais dans toutes les langues."
+  }
+}
