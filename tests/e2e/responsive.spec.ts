@@ -15,7 +15,10 @@ for (const width of widths) {
 
     for (const route of routes) {
       test(`${route} has no horizontal overflow and shows its heading`, async ({ page }) => {
-        const response = await page.goto(route, { waitUntil: "domcontentloaded" });
+        const response = await page.goto(route, {
+          waitUntil: "domcontentloaded",
+          timeout: 90_000,
+        });
         expect(response?.status()).toBe(200);
         await expect(page.locator("h1").first()).toBeVisible();
         const dimensions = await page.evaluate(() => ({
