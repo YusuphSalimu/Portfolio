@@ -31,7 +31,7 @@ export async function generateMetadata({
     fr: `/fr/projects/${project.slug}`,
   };
   return {
-    title: `${project.title} — Yusuph Salimu`,
+    title: project.title,
     description,
     alternates: { canonical, languages: localizedUrls },
     openGraph: {

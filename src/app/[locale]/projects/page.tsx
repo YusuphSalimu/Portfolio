@@ -7,7 +7,7 @@ import ProjectsCatalog from "@/components/projects/ProjectsCatalog";
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
   return {
-    title: "Projects — Yusuph Salimu",
+    title: "Projects",
     description: "Selected software, data, and product case studies by Yusuph Salimu.",
     alternates: {
       canonical: `/${locale}/projects`,

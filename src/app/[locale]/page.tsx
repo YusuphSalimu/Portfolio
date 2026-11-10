@@ -34,7 +34,7 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "hero" });
   return {
-    title: "Yusuph Salimu — Software Engineer | Full-Stack Developer",
+    title: { absolute: "Yusuph Salimu — Software Engineer | Full-Stack Developer" },
     description: t("subtitle"),
     alternates: {
       canonical: `/${locale}`,
