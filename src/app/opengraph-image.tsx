@@ -18,7 +18,7 @@ export default function OpenGraphImage() {
           padding: "76px",
           color: "#f4f2ff",
           background: "radial-gradient(circle at 88% 18%, rgba(79,140,255,.32), transparent 34%), linear-gradient(130deg,#0a0a0f 30%,#17132a 100%)",
-          fontFamily: "Arial, sans-serif",
+          fontFamily: "Space Grotesk, sans-serif",
         }}
       >
         <div style={{ color: "#b7aaff", fontSize: 24, letterSpacing: 4, marginBottom: 26 }}>YUSUPH.DEV</div>
