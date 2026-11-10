@@ -69,7 +69,7 @@ export async function POST(request: Request) {
 
   const resend = new Resend(apiKey);
   const { data, error } = await resend.emails.send({
-    from: process.env.RESEND_FROM || "Portfolio contact <onboarding@resend.dev>",
+    from: process.env.CONTACT_FROM || "onboarding@resend.dev",
     to: contactTo,
     replyTo: parsed.data.email,
     subject: `Portfolio inquiry: ${parsed.data.projectType}`,

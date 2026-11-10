@@ -59,6 +59,7 @@ export default function ProjectCard({
         <div className="project-card__content">
           <div className="project-card__eyebrow">{categoryLabels[project.category]}</div>
           <h2>{project.title}</h2>
+          <p className="project-card__ownership">{project.client ? "Client project" : "Own project"}</p>
           <p>{project.summary}</p>
           <ul className="stack-chips" aria-label="Technology stack">
             {visibleStack.map((item) => (

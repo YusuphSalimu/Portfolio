@@ -214,6 +214,14 @@ body {
   line-height: 1.65;
 }
 
+.project-card__content > .project-card__ownership {
+  margin: 0 0 8px;
+  color: #c9bcff;
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+}
+
 .stack-chips {
   display: flex;
   flex-wrap: wrap;

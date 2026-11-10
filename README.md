@@ -26,7 +26,7 @@ npm run dev
 npm run build
 ```
 
-For the contact form, copy `.env.example` to `.env.local` and configure `RESEND_API_KEY` and `CONTACT_TO` (and a verified `RESEND_FROM` sender for production email delivery). Until configured, the form reports that email delivery is unavailable and displays the direct email address.
+For the contact form, copy `.env.example` to `.env.local` and configure `RESEND_API_KEY` and `CONTACT_TO`. Optionally set a verified `CONTACT_FROM` sender for production email delivery. Until configured, the form reports that email delivery is unavailable and displays the direct email address.
 
 ## Adding a project
 
