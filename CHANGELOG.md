@@ -7,3 +7,4 @@
 - Added localized English, Swahili, and French routes and messages, with project case studies remaining in English.
 - Added a validated contact API with honeypot and per-instance rate limiting, plus optional Resend delivery.
 - Added Person JSON-LD, localized sitemap entries, Open Graph generation, a social preview image, and Vercel analytics integrations.
+- Connected the CV download to the owner-provided PDF without changing its contents, added privacy-safe client/own project labels, and aligned the Resend sender setting with `CONTACT_FROM`.
