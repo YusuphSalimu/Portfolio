@@ -8,6 +8,7 @@
 - Switched the interface typography to Space Grotesk and added the rotating gradient terminal logo.
 - Regenerated the 1280×640 social preview from the updated Open Graph design.
 - Added responsive Playwright coverage for the requested pages and viewport sizes.
+- Verified all 20 responsive checks, the required local route responses, and the lint, type, unit, project, and production-build checks.
 - Owner TODO: confirm written permission before adding client logos and arrange native review of Swahili and French text.
 
 ## Phase 3 — Homepage, localization, contact, and SEO (2026-11-10)
