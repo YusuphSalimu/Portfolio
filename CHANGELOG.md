@@ -5,7 +5,7 @@
 - Featured Zantan Company, Zantan Mining, and Ayaven Kids first, followed by Hardware Stores, with updated project details and live-site actions.
 - Converted copies of the three owner-provided screenshots to optimized 1600×900 WebP media; originals remain unchanged.
 - Updated project cards, case-study media, responsive grids, mobile navigation, and reduced-motion behavior.
-- Replaced Archivo with Space Grotesk and added the rotating gradient terminal logo.
+- Switched the interface typography to Space Grotesk and added the rotating gradient terminal logo.
 - Added responsive Playwright coverage for the requested pages and viewport sizes.
 - TODO: written permission before adding client logos; native review of Swahili and French text; upload the updated social preview image to GitHub.
 
