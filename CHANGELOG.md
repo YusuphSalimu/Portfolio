@@ -6,8 +6,9 @@
 - Converted copies of the three owner-provided screenshots to optimized 1600×900 WebP media; originals remain unchanged.
 - Updated project cards, case-study media, responsive grids, mobile navigation, and reduced-motion behavior.
 - Switched the interface typography to Space Grotesk and added the rotating gradient terminal logo.
+- Regenerated the 1280×640 social preview from the updated Open Graph design.
 - Added responsive Playwright coverage for the requested pages and viewport sizes.
-- TODO: written permission before adding client logos; native review of Swahili and French text; upload the updated social preview image to GitHub.
+- Owner TODO: confirm written permission before adding client logos and arrange native review of Swahili and French text.
 
 ## Phase 3 — Homepage, localization, contact, and SEO (2026-11-10)
 
