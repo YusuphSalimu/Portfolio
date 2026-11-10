@@ -37,10 +37,12 @@ export default async function LocaleLayout({
 
   return (
     <NextIntlClientProvider messages={messages}>
+      <div lang={locale} className="locale-shell">
       <SiteNavigation />
       <CommandPalette projects={projects} />
       {children}
       <SiteFooter />
+      </div>
     </NextIntlClientProvider>
   );
 }

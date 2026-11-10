@@ -890,6 +890,7 @@ body {
   font-weight: 700;
   letter-spacing: -0.07em;
   line-height: 0.98;
+  font-variation-settings: "wdth" 110;
 }
 
 .availability-chip {

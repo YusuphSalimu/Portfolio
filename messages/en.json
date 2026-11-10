@@ -32,7 +32,7 @@
   },
   "about": {
     "title": "About Me",
-    "paragraph": "I am a Software Engineer based in Dodoma, Tanzania, passionate about building reliable, performant, and accessible digital products. With experience delivering production-ready websites and web platforms, I handle the full lifecycle from requirements and architecture to deployment and DNS/SSL configuration. I combine strong full-stack skills with practical data analysis and machine learning knowledge to solve real-world problems."
+    "paragraph": "I’m a Software Engineering student at the University of Dodoma, based in Dodoma, Tanzania. I build websites and web platforms for clients, handling requirements, planning, implementation, testing, launch, and deployment setup. I also work with data cleaning and predictive modeling."
   },
   "services": {
     "title": "Services",
@@ -40,19 +40,19 @@
     "items": {
       "websites": {
         "title": "Business Websites & Catalogues",
-        "description": "Fast, responsive, and SEO-conscious websites designed to convert visitors into clients and present your business professionally."
+        "description": "Responsive business websites and catalogues, including SEO-conscious websites."
       },
       "platforms": {
         "title": "Web Platforms & Authentication",
-        "description": "Custom web applications featuring secure user authentication, multi-language support, and interactive portals."
+        "description": "Web platforms with authentication, built around the needs of each project."
       },
       "apis": {
         "title": "Backend APIs & SaaS",
-        "description": "Robust REST APIs, background job processing, and backend systems built with Django, Node.js, or Spring Boot."
+        "description": "Backend APIs and SaaS development using the tools suited to each project."
       },
       "ml": {
         "title": "Data & Machine Learning",
-        "description": "Data cleaning, exploratory analysis, and predictive modeling using Python, Pandas, and scikit-learn."
+        "description": "Data cleaning and machine learning models using Python data tools."
       }
     }
   },
@@ -61,19 +61,19 @@
     "steps": {
       "discover": {
         "title": "1. Discover",
-        "description": "We define requirements, target audience, and project goals."
+        "description": "We discuss requirements and plan the work around the project goals."
       },
       "build": {
         "title": "2. Build",
-        "description": "I develop the solution with clean code, testing, and modern standards."
+        "description": "I implement the agreed solution and test its key workflows."
       },
       "launch": {
         "title": "3. Launch",
-        "description": "We deploy to production with custom domains, SSL, and performance optimization."
+        "description": "I launch the project and help with hosting, domain, DNS, and SSL setup."
       },
       "support": {
         "title": "4. Support",
-        "description": "Post-launch monitoring, maintenance, and updates to ensure smooth operation."
+        "description": "We discuss any post-launch changes or next steps."
       }
     }
   },

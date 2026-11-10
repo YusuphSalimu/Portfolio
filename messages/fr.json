@@ -11,24 +11,24 @@
   "impact": { "clientWebsites": "3 sites clients en ligne", "siteLanguages": "3 langues de site (EN · SW · FR)", "location": "Dodoma, Tanzanie", "remoteReady": "Prêt pour le travail à distance" },
   "about": {
     "title": "À propos de moi",
-    "paragraph": "Je suis un ingénieur logiciel basé à Dodoma, en Tanzanie, passionné par la création de produits numériques fiables, performants et accessibles. Avec de l'expérience dans la livraison de sites web et de plateformes prêts pour la production, je gère l'ensemble du cycle de vie, des exigences et de l'architecture au déploiement et à la configuration DNS/SSL. Je combine de solides compétences full-stack avec une analyse pratique des données et du machine learning pour résoudre des problèmes réels."
+    "paragraph": "Je suis étudiant en génie logiciel à l'Université de Dodoma et je vis à Dodoma, en Tanzanie. Je crée des sites web et des plateformes pour des clients, en prenant en charge les besoins, la planification, la mise en œuvre, les tests, le lancement et la configuration du déploiement. Je travaille également sur le nettoyage des données et la modélisation prédictive."
   },
   "services": {
     "title": "Services", "deploymentNote": "Hébergement, déploiement, DNS et configuration SSL inclus.",
     "items": {
-      "websites": { "title": "Sites Web d'Entreprise & Catalogues", "description": "Sites rapides, réactifs et optimisés pour le SEO, conçus pour convertir les visiteurs en clients et présenter votre entreprise de manière professionnelle." },
-      "platforms": { "title": "Plateformes Web & Authentification", "description": "Applications web sur mesure avec authentification sécurisée des utilisateurs, support multilingue et portails interactifs." },
-      "apis": { "title": "APIs Backend & SaaS", "description": "APIs REST robustes, traitement de tâches en arrière-plan et systèmes backend développés avec Django, Node.js ou Spring Boot." },
-      "ml": { "title": "Data & Machine Learning", "description": "Nettoyage de données, analyse exploratoire et modélisation prédictive avec Python, Pandas et scikit-learn." }
+      "websites": { "title": "Sites Web d'Entreprise & Catalogues", "description": "Sites web et catalogues d'entreprise adaptatifs, y compris des sites qui tiennent compte du SEO." },
+      "platforms": { "title": "Plateformes Web & Authentification", "description": "Plateformes web avec authentification, conçues selon les besoins de chaque projet." },
+      "apis": { "title": "APIs Backend & SaaS", "description": "Développement d'API backend et SaaS avec les outils adaptés à chaque projet." },
+      "ml": { "title": "Data & Machine Learning", "description": "Nettoyage des données et modèles de machine learning avec les outils de données Python." }
     }
   },
   "process": {
     "title": "Processus",
     "steps": {
-      "discover": { "title": "1. Découverte", "description": "Nous définissons les exigences, le public cible et les objectifs du projet." },
-      "build": { "title": "2. Développement", "description": "Je développe la solution avec un code propre, des tests et des normes modernes." },
-      "launch": { "title": "3. Lancement", "description": "Nous déployons en production avec votre domaine personnalisé, SSL et optimisation des performances." },
-      "support": { "title": "4. Support", "description": "Suivi post-lancement, maintenance et mises à jour pour assurer un fonctionnement fluide." }
+      "discover": { "title": "1. Découverte", "description": "Nous discutons des besoins et planifions le travail selon les objectifs du projet." },
+      "build": { "title": "2. Développement", "description": "Je mets en œuvre la solution convenue et teste ses principaux parcours." },
+      "launch": { "title": "3. Lancement", "description": "Je lance le projet et aide à configurer l'hébergement, le domaine, le DNS et SSL." },
+      "support": { "title": "4. Support", "description": "Nous discutons des changements après le lancement ou des prochaines étapes." }
     }
   },
   "experience": {

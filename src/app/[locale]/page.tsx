@@ -26,13 +26,18 @@ const services = [
 
 const processSteps = ["discover", "build", "launch", "support"] as const;
 
-export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations("hero");
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "hero" });
   return {
     title: "Yusuph Salimu — Software Engineer | Full-Stack Developer",
     description: t("subtitle"),
     alternates: {
-      canonical: "/",
+      canonical: `/${locale}`,
       languages: { en: "/en", sw: "/sw", fr: "/fr" },
     },
   };
@@ -122,7 +127,7 @@ export default async function HomePage() {
 
         <section className="content-section page-shell" aria-labelledby="services-title">
           <Reveal>
-            <SectionHeading eyebrow="02 / What I do" title={t("services.title")} />
+            <SectionHeading eyebrow={`02 / ${t("services.title")}`} title={t("services.title")} />
             <div className="service-grid">
               {services.map(({ key, icon }, index) => (
                 <Reveal key={key} delay={index * 0.06}>
@@ -140,7 +145,7 @@ export default async function HomePage() {
 
         <section className="content-section page-shell" aria-labelledby="process-title">
           <Reveal>
-            <SectionHeading eyebrow="03 / How we work" title={t("process.title")} />
+            <SectionHeading eyebrow={`03 / ${t("process.title")}`} title={t("process.title")} />
             <div className="process-grid">
               {processSteps.map((step, index) => (
                 <article className="process-step" key={step}>
@@ -155,7 +160,7 @@ export default async function HomePage() {
 
         <section className="content-section page-shell" id="projects" aria-labelledby="projects-title">
           <Reveal>
-            <SectionHeading eyebrow="04 / Selected work" title={t("nav.projects")} description="Thoughtful software and product work built to solve real problems." />
+            <SectionHeading eyebrow={`04 / ${t("nav.projects")}`} title={t("nav.projects")} description={t("projects.intro")} />
             <div id="projects-grid"><ProjectGrid projects={projects} /></div>
             <div className="home-projects__all">
               <Link className="button button--primary" href="/projects">{t("projects.viewAll")} <span aria-hidden="true">→</span></Link>
@@ -165,7 +170,7 @@ export default async function HomePage() {
 
         <section className="content-section page-shell" id="experience" aria-labelledby="experience-title">
           <Reveal>
-            <SectionHeading eyebrow="05 / Background" title={t("experience.title")} />
+            <SectionHeading eyebrow={`05 / ${t("experience.title")}`} title={t("experience.title")} />
             <div className="timeline">
               <article className="timeline-entry">
                 <span className="timeline-entry__dot" aria-hidden="true" />
@@ -187,7 +192,7 @@ export default async function HomePage() {
 
         <section className="content-section page-shell" id="skills" aria-labelledby="skills-title">
           <Reveal>
-            <SectionHeading eyebrow="06 / Toolkit" title={t("skills.title")} />
+            <SectionHeading eyebrow={`06 / ${t("skills.title")}`} title={t("skills.title")} />
             <div className="skills-grid">
               {Object.entries(skillGroups).map(([group, skills]) => (
                 <article className={`glass-surface skill-card skill-card--${group}`} key={group}>
@@ -201,7 +206,7 @@ export default async function HomePage() {
 
         <section className="content-section page-shell" aria-labelledby="certificates-title">
           <Reveal>
-            <SectionHeading eyebrow="07 / Learning" title={t("certificates.title")} />
+            <SectionHeading eyebrow={`07 / ${t("certificates.title")}`} title={t("certificates.title")} />
             <div className="credentials-grid">
               <div>
                 <h3 className="subsection-title">{t("certificates.certsTitle")}</h3>
@@ -225,7 +230,7 @@ export default async function HomePage() {
 
         <section className="content-section page-shell contact-section" id="contact" aria-labelledby="contact-title">
           <Reveal>
-            <SectionHeading eyebrow="08 / Contact" title={t("contact.title")} description={t("contact.subtitle")} />
+            <SectionHeading eyebrow={`08 / ${t("nav.contact")}`} title={t("contact.title")} description={t("contact.subtitle")} />
             <div className="contact-layout">
               <div className="contact-cards">
                 {contactCards.map((card) => (

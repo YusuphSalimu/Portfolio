@@ -33,7 +33,7 @@
   },
   "about": {
     "title": "Kuhusu Mimi",
-    "paragraph": "Mimi ni Mhandisi wa Programu niliyepo Dodoma, Tanzania, mwenye shauku ya kujenga bidhaa za kidijitali za kuaminika, zenye utendaji wa juu, na zinazofikiwa na wote. Mwenye uzoefu wa kutoa tovuti na mifumo ya wavuti iliyokamilika, ninashughulikia mzunguko mzima kuanzia mahitaji na muundo hadi uwekaji hewani na usanidi wa DNS/SSL. Ninachanganya ujuzi thabiti wa full-stack na uchambuzi wa data na kujifunza kwa mashine ili kutatua changamoto za ulimwengu halisi."
+    "paragraph": "Mimi ni mwanafunzi wa Uhandisi wa Programu katika Chuo Kikuu cha Dodoma, ninayeishi Dodoma, Tanzania. Ninajenga tovuti na mifumo ya wavuti kwa wateja, nikishughulikia mahitaji, mipango, utekelezaji, majaribio, uzinduzi, na usanidi wa uwekaji hewani. Pia ninafanya kazi ya kusafisha data na uundaji wa mifano ya utabiri."
   },
   "services": {
     "title": "Huduma",
@@ -41,29 +41,29 @@
     "items": {
       "websites": {
         "title": "Tovuti za Biashara na Katalogi",
-        "description": "Tovuti za haraka, zinazobadilika na kuzingatia SEO zilizoundwa kubadili wageni kuwa wateja na kuwasilisha biashara yako kwa kitaalamu."
+        "description": "Tovuti na katalogi za biashara zinazobadilika, zikiwemo tovuti zinazozingatia SEO."
       },
       "platforms": {
         "title": "Mifumo ya Wavuti na Uthibitisho",
-        "description": "Programu za wavuti za kipekee zenye uthibitisho salama wa watumiaji, msaada wa lugha nyingi, na tovuti mbalimbali."
+        "description": "Mifumo ya wavuti yenye uthibitisho, iliyojengwa kulingana na mahitaji ya kila mradi."
       },
       "apis": {
         "title": "API za Nyuma na SaaS",
-        "description": "API thabiti za REST, uchanchaji wa kazi za nyuma, na mifumo ya nyuma iliyojengwa kwa Django, Node.js, au Spring Boot."
+        "description": "Uendelezaji wa API za backend na SaaS kwa kutumia zana zinazofaa kwa kila mradi."
       },
       "ml": {
         "title": "Data na Kujifunza kwa Mashine",
-        "description": "Usafishaji wa data, uchambuzi wa kina, na uundaji wa mifano ya utabiri kwa kutumia Python, Pandas, na scikit-learn."
+        "description": "Usafishaji wa data na mifano ya kujifunza kwa mashine kwa kutumia zana za data za Python."
       }
     }
   },
   "process": {
     "title": "Mchakato",
     "steps": {
-      "discover": { "title": "1. Gundua", "description": "Tunamfahamisha mahitaji, walengwa, na malengo ya mradi." },
-      "build": { "title": "2. Jenga", "description": "Ninatengeneza suluhisho kwa kutumia msimbo safi, majaribio, na viwango vya kisasa." },
-      "launch": { "title": "3. Zindua", "description": "Tunaweka hewani kwa kutumia kikoa chako, SSL, na uboreshaji wa utendaji." },
-      "support": { "title": "4. Msaada", "description": "Ufuatiliaji baada ya uzinduzi, matengenezo, na sasisho ili kuhakikisha uendeshaji mzuri." }
+      "discover": { "title": "1. Gundua", "description": "Tunajadili mahitaji na kupanga kazi kulingana na malengo ya mradi." },
+      "build": { "title": "2. Jenga", "description": "Ninatekeleza suluhisho lililokubaliwa na kujaribu njia zake muhimu." },
+      "launch": { "title": "3. Zindua", "description": "Ninazindua mradi na kusaidia usanidi wa hosting, kikoa, DNS, na SSL." },
+      "support": { "title": "4. Msaada", "description": "Tunajadili mabadiliko baada ya uzinduzi au hatua zinazofuata." }
     }
   },
   "experience": {
