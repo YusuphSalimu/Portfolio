@@ -1,12 +1,13 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/routing";
+import Logo from "@/components/brand/Logo";
 
 export default async function SiteFooter() {
   const t = await getTranslations("footer");
   return (
     <footer className="site-footer">
       <div className="page-shell site-footer__inner">
-        <div><Link className="site-logo" href="/">Yusuph Salimu</Link><p>{t("shortLine")}</p></div>
+        <div><Logo /><p>{t("shortLine")}</p></div>
         <nav aria-label="Social links" className="footer-socials">
           <a href="https://www.linkedin.com/in/yusuph-salimu-7818333aa/" aria-label="LinkedIn profile">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.2 8.2H2.1V22h3.1V8.2ZM3.7 2a1.8 1.8 0 1 0 0 3.6 1.8 1.8 0 0 0 0-3.6ZM22 13.9c0-4.1-2.2-6-5.1-6a4.4 4.4 0 0 0-3.9 2.1V8.2H9.9V22H13v-7.1c0-1.9.4-3.8 2.8-3.8s2.4 2.2 2.4 3.9V22h3.1l.7-8.1Z" /></svg>

@@ -66,7 +66,13 @@ export default function ProjectGallery({ images }: { images: ProjectImage[] }) {
               setActiveIndex(index);
             }}
           >
-            <Image src={image.src} alt={image.alt} fill sizes="(max-width: 700px) 100vw, 50vw" />
+            <Image
+              src={image.src}
+              alt={image.alt}
+              width={1600}
+              height={900}
+              sizes="(min-width: 1024px) 360px, (min-width: 640px) 50vw, 100vw"
+            />
           </button>
         ))}
       </div>
@@ -104,7 +110,13 @@ export default function ProjectGallery({ images }: { images: ProjectImage[] }) {
             ←
           </button>
           <div className="lightbox__image">
-            <Image src={activeImage.src} alt={activeImage.alt} fill sizes="95vw" />
+            <Image
+              src={activeImage.src}
+              alt={activeImage.alt}
+              width={1600}
+              height={900}
+              sizes="(min-width: 1024px) 360px, (min-width: 640px) 50vw, 100vw"
+            />
           </div>
           <button
             type="button"

@@ -79,7 +79,15 @@ export default async function ProjectCaseStudy({
         <span aria-hidden="true">←</span> All projects
       </Link>
       <div className="case-study__hero">
-        <Image src={project.heroImage.src} alt={project.heroImage.alt} fill priority sizes="(max-width: 900px) 100vw, 1200px" />
+        <Image
+          className="case-study__hero-image"
+          src={project.heroImage.src}
+          alt={project.heroImage.alt}
+          width={1600}
+          height={900}
+          priority
+          sizes="(min-width: 1024px) 360px, (min-width: 640px) 50vw, 100vw"
+        />
         <div className="case-study__hero-shade" />
         <div className="case-study__hero-copy">
           <div className="case-study__badges"><StatusBadge status={project.status} /></div>

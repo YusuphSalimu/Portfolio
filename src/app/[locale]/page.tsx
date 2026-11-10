@@ -45,7 +45,7 @@ export async function generateMetadata({
 
 export default async function HomePage() {
   const t = await getTranslations();
-  const projects = getFeaturedProjects().slice(0, 3);
+  const projects = getFeaturedProjects().slice(0, 4);
   const testimonials: never[] = [];
   const contactCards = [
     { label: "Email", value: "yusuphsaalim@gmail.com", href: "mailto:yusuphsaalim@gmail.com", icon: "✉" },
