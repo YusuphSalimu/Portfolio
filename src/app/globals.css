@@ -103,7 +103,6 @@ body {
 
 .project-card:hover,
 .project-card:focus-visible {
-  transform: translateY(-4px);
   border-color: rgba(168, 150, 255, 0.38);
   box-shadow: 0 0 40px rgba(124, 92, 255, 0.25);
 }
@@ -898,6 +897,10 @@ body {
 
 .mobile-menu-toggle,
 .mobile-navigation {
+  display: none;
+}
+
+.mobile-navigation-backdrop {
   display: none;
 }
 
