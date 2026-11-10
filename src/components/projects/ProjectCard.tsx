@@ -17,9 +17,11 @@ const categoryLabels = {
 export default function ProjectCard({
   project,
   priority = false,
+  delay = 0,
 }: {
   project: ProjectEntry;
   priority?: boolean;
+  delay?: number;
 }) {
   const reducedMotion = useReducedMotion();
   const visibleStack = project.stack.slice(0, 4);
@@ -32,7 +34,7 @@ export default function ProjectCard({
       whileInView={reducedMotion ? undefined : { opacity: 1, y: 0 }}
       whileHover={reducedMotion ? undefined : { y: -4, rotateX: 1, rotateY: -1 }}
       viewport={{ once: true, amount: 0.12 }}
-      transition={{ duration: 0.35 }}
+      transition={{ duration: 0.35, delay: reducedMotion ? 0 : delay }}
       style={{ transformPerspective: 1000 }}
     >
       <Link

@@ -19,7 +19,7 @@ export default function ProjectGrid({
   return (
     <div className={`project-grid project-grid--${variant}`}>
       {projects.map((project, index) => (
-        <ProjectCard key={project.slug} project={project} priority={index === 0} />
+        <ProjectCard key={project.slug} project={project} priority={index === 0} delay={index * 0.07} />
       ))}
     </div>
   );

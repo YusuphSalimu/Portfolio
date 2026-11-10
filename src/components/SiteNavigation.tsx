@@ -28,6 +28,18 @@ export default function SiteNavigation() {
     setMenuOpen(false);
   }, [pathname]);
 
+  useEffect(() => {
+    if (!menuOpen) return;
+    function closeOnEscape(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        setMenuOpen(false);
+        menuButton.current?.focus();
+      }
+    }
+    window.addEventListener("keydown", closeOnEscape);
+    return () => window.removeEventListener("keydown", closeOnEscape);
+  }, [menuOpen]);
+
   function toggleTheme() {
     const nextIsLight = !lightTheme;
     setLightTheme(nextIsLight);
@@ -89,9 +101,9 @@ export default function SiteNavigation() {
         aria-hidden={!menuOpen}
       >
         {sectionLinks.map((section) => (
-          <a key={section} href={`${onHomePage ? "" : `/${locale}` }#${section}`} tabIndex={menuOpen ? 0 : -1}>{t(section)}</a>
+          <a key={section} href={`${onHomePage ? "" : `/${locale}` }#${section}`} tabIndex={menuOpen ? 0 : -1} onClick={() => setMenuOpen(false)}>{t(section)}</a>
         ))}
-        <a className="button button--primary" href={`${onHomePage ? "" : `/${locale}` }#contact`} tabIndex={menuOpen ? 0 : -1}>{t("letsConnect")}</a>
+        <a className="button button--primary" href={`${onHomePage ? "" : `/${locale}` }#contact`} tabIndex={menuOpen ? 0 : -1} onClick={() => setMenuOpen(false)}>{t("letsConnect")}</a>
       </nav>
     </>
   );
