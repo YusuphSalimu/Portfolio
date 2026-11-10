@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { motion, useReducedMotion } from "motion/react";
 import { Link } from "@/i18n/routing";
