@@ -111,9 +111,10 @@ export default async function HomePage() {
               <Image
                 src="/images/yusuph-salimu.png"
                 alt="Portrait of Yusuph Salimu"
-                fill
+                width={826}
+                height={1062}
                 priority
-                sizes="(max-width: 760px) 80vw, 360px"
+                sizes="(min-width: 1024px) 360px, (min-width: 640px) 50vw, 100vw"
               />
             </div>
             <div className="about-copy">

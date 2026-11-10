@@ -92,6 +92,7 @@ body {
 
 .project-card {
   display: flex;
+  min-height: 44px;
   height: 100%;
   min-width: 0;
   flex-direction: column;
@@ -338,6 +339,7 @@ body {
 }
 
 .category-filter__chip {
+  min-height: 44px;
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 999px;
   padding: 10px 15px;
@@ -1065,6 +1067,9 @@ body {
 }
 
 .text-button {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
   padding: 10px;
   color: #ded8ff;
   font-weight: 600;
@@ -1188,7 +1193,13 @@ body {
   box-shadow: 0 0 45px rgba(124, 92, 255, 0.14);
 }
 
-.about-photo img { object-fit: cover; }
+.about-photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 .about-copy > p:not(.eyebrow) {
   color: var(--page-muted);
