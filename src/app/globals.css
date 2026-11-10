@@ -309,6 +309,7 @@ body {
 
 .button--primary {
   border-color: transparent;
+  color: #0a0a0f;
   background: linear-gradient(110deg, #7c5cff, #4f8cff);
   box-shadow: 0 8px 30px rgba(124, 92, 255, 0.2);
 }
@@ -1140,6 +1141,18 @@ body {
   grid-column: span 6;
 }
 
+.project-grid--bento {
+  grid-auto-flow: dense;
+}
+
+.project-grid--bento .project-grid__item {
+  grid-column: span 4;
+}
+
+.project-grid--bento .project-grid__item--featured {
+  grid-column: span 8;
+}
+
 .project-grid__item .project-card {
   height: 100%;
 }
@@ -1355,6 +1368,7 @@ body {
 .site-footer__inner p { max-width: 420px; margin: 8px 0 0; color: var(--page-muted); font-size: 0.88rem; }
 .site-footer__inner > small { color: var(--page-muted); }
 .footer-socials { gap: 16px; }
+.footer-socials svg { width: 20px; height: 20px; fill: currentColor; }
 .language-note { margin: 20px 0; border-left: 2px solid #8e78ff; padding: 10px 14px; color: var(--page-muted); background: var(--card-surface); }
 
 :focus-visible {

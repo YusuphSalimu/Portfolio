@@ -3,13 +3,13 @@ import en from "../../messages/en.json";
 import sw from "../../messages/sw.json";
 import fr from "../../messages/fr.json";
 
-function getKeys(obj: Record<string, any>, prefix = ""): string[] {
+function getKeys(obj: Record<string, unknown>, prefix = ""): string[] {
   return Object.keys(obj).reduce((res: string[], key: string) => {
     if (key === "_comment") return res;
     const value = obj[key];
     const newPrefix = prefix ? `${prefix}.${key}` : key;
     if (typeof value === "object" && value !== null && !Array.isArray(value)) {
-      res.push(...getKeys(value, newPrefix));
+      res.push(...getKeys(value as Record<string, unknown>, newPrefix));
     } else {
       res.push(newPrefix);
     }

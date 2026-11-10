@@ -24,11 +24,11 @@ export default function CategoryFilter({
     <div className="category-filter" role="group" aria-label={t("filterLabel")}>
       {categories.map((category) => (
         <button
-          key={category.value}
+          key={category}
           type="button"
-          aria-pressed={activeCategory === category.value}
+          aria-pressed={activeCategory === category}
           className="category-filter__chip"
-          onClick={() => selectCategory(category.value)}
+          onClick={() => selectCategory(category)}
         >
           {t(category)}
         </button>

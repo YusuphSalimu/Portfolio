@@ -161,7 +161,7 @@ export default async function HomePage() {
         <section className="content-section page-shell" id="projects" aria-labelledby="projects-title">
           <Reveal>
             <SectionHeading eyebrow={`04 / ${t("nav.projects")}`} title={t("nav.projects")} description={t("projects.intro")} />
-            <div id="projects-grid"><ProjectGrid projects={projects} /></div>
+            <div id="projects-grid"><ProjectGrid projects={projects} variant="standard" /></div>
             <div className="home-projects__all">
               <Link className="button button--primary" href="/projects">{t("projects.viewAll")} <span aria-hidden="true">→</span></Link>
             </div>
