@@ -76,7 +76,7 @@ export default function SiteNavigation() {
                 ))}
               </select>
             </label>
-            <button className="icon-button theme-toggle" type="button" onClick={toggleTheme} aria-label={t("themeToggle")}>
+            <button className="icon-button theme-toggle" type="button" onClick={toggleTheme} aria-label={t("themeToggle")} aria-pressed={lightTheme}>
               {lightTheme ? "☾" : "☼"}
             </button>
             <a className="button button--primary header-connect" href={`${onHomePage ? "" : `/${locale}` }#contact`}>{t("letsConnect")}</a>
