@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type KeyboardEvent } from "react";
 import { routing } from "@/i18n/routing";
 import Logo from "@/components/brand/Logo";
 
@@ -55,7 +55,7 @@ export default function SiteNavigation() {
     window.location.assign(`/${nextLocale}${pathname.replace(/^\/(en|sw|fr)/, "") || ""}`);
   }
 
-  function handleMenuKeyDown(event: React.KeyboardEvent<HTMLElement>) {
+  function handleMenuKeyDown(event: KeyboardEvent<HTMLElement>) {
     if (event.key !== "Tab" || !menuRef.current) return;
     const focusable = menuRef.current.querySelectorAll<HTMLElement>(
       'a[href], select:not([disabled])',

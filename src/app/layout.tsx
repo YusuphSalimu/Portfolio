@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
-import { Archivo, JetBrains_Mono } from "next/font/google";
+import { JetBrains_Mono, Space_Grotesk } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
-const archivo = Archivo({
-  variable: "--font-archivo",
-  axes: ["wdth"],
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space-grotesk",
   subsets: ["latin"],
-  weight: "variable",
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 const jetBrainsMono = JetBrains_Mono({
@@ -47,7 +46,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${archivo.variable} ${jetBrainsMono.variable} antialiased`}>
+      <body className={`${spaceGrotesk.variable} ${jetBrainsMono.variable} antialiased`}>
         {children}
         <Analytics />
         <SpeedInsights />
