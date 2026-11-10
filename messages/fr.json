@@ -1,6 +1,6 @@
 {
   "_comment": "Machine translation. Pending native review.",
-  "nav": { "about": "À propos", "skills": "Compétences", "projects": "Projets", "experience": "Expérience", "contact": "Contact", "letsConnect": "Me contacter", "skipToContent": "Aller au contenu principal" },
+  "nav": { "about": "À propos", "skills": "Compétences", "projects": "Projets", "experience": "Expérience", "contact": "Contact", "letsConnect": "Me contacter", "skipToContent": "Aller au contenu principal", "themeToggle": "Basculer entre les thèmes clair et sombre", "language": "Langue" },
   "hero": {
     "availability": "Disponible pour du travail freelance et à distance",
     "greeting": "Bonjour, je suis Yusuph Salimu.",
@@ -47,10 +47,35 @@
   "contact": {
     "title": "Travaillons ensemble.", "subtitle": "Vous avez un projet en tête ou souhaitez discuter d'une opportunité ? N'hésitez pas à me contacter.",
     "form": {
-      "name": "Votre nom", "email": "Votre e-mail", "projectType": "Type de projet", "budget": "Budget (optionnel)", "message": "Message", "send": "Envoyer le message", "sending": "Envoi en cours...", "success": "Merci ! Votre message a été envoyé.", "error": "Échec de l'envoi du message. Veuillez envoyer un e-mail directement à yusuphsaalim@gmail.com",
+      "name": "Votre nom", "email": "Votre e-mail", "projectType": "Type de projet", "chooseType": "Choisissez un type de projet", "budget": "Budget (optionnel)", "message": "Message", "send": "Envoyer le message", "sending": "Envoi en cours...", "success": "Merci ! Votre message a été envoyé.", "error": "Échec de l'envoi du message. Veuillez envoyer un e-mail directement à yusuphsaalim@gmail.com",
       "types": { "website": "Site web", "platform": "Plateforme web", "backend": "Backend / SaaS", "data": "Data / ML", "other": "Autre" }
     }
   },
   "footer": { "shortLine": "Ingénieur logiciel créant des plateformes web, des sites d'entreprise et des systèmes backend.", "rights": "Tous droits réservés." },
-  "common": { "englishOnlyNote": "L'étude de cas de ce projet est actuellement disponible uniquement en anglais." }
+  "common": { "englishOnlyNote": "L'étude de cas de ce projet est actuellement disponible uniquement en anglais." },
+  "projects": {
+    "title": "Projets sélectionnés",
+    "intro": "Des projets de produit, d'ingénierie et de données conçus pour résoudre des problèmes concrets.",
+    "viewAll": "Voir tous les projets",
+    "categories": {
+      "filterLabel": "Filtrer les projets par catégorie",
+      "all": "Tout",
+      "web": "Web",
+      "data-ml": "Data & ML",
+      "saas": "SaaS",
+      "competition": "Compétition",
+      "mobile": "Mobile"
+    }
+  },
+  "palette": {
+    "trigger": "Navigation rapide",
+    "title": "Palette de commandes",
+    "search": "Rechercher des sections et des projets",
+    "empty": "Aucune section ni aucun projet correspondant.",
+    "about": "À propos",
+    "skills": "Compétences",
+    "projects": "Projets",
+    "experience": "Expérience",
+    "contact": "Contact"
+  }
 }

@@ -7,7 +7,9 @@
     "experience": "Uzoefu",
     "contact": "Mawasiliano",
     "letsConnect": "Wasiliana Nami",
-    "skipToContent": "Ruka hadi kwenye yaliyomo"
+    "skipToContent": "Ruka hadi kwenye yaliyomo",
+    "themeToggle": "Badili mandhari ya mwanga na giza",
+    "language": "Lugha"
   },
   "hero": {
     "availability": "Niko wazi kwa kazi za kujitegemea na za mbali",
@@ -116,6 +118,7 @@
       "name": "Jina Lako",
       "email": "Barua Pepe Yako",
       "projectType": "Aina ya Mradi",
+      "chooseType": "Chagua aina ya mradi",
       "budget": "Bajeti (sio lazima)",
       "message": "Ujumbe",
       "send": "Tuma Ujumbe",
@@ -137,5 +140,30 @@
   },
   "common": {
     "englishOnlyNote": "Uchambuzi wa mradi huu kwa sasa unapatikana kwa Kiingereza tu."
+  },
+  "projects": {
+    "title": "Kazi Zilizochaguliwa",
+    "intro": "Miradi ya bidhaa, uhandisi, na data iliyoundwa kutatua changamoto halisi.",
+    "viewAll": "Tazama miradi yote",
+    "categories": {
+      "filterLabel": "Chuja miradi kwa kategoria",
+      "all": "Yote",
+      "web": "Wavuti",
+      "data-ml": "Data na ML",
+      "saas": "SaaS",
+      "competition": "Mashindano",
+      "mobile": "Simu"
+    }
+  },
+  "palette": {
+    "trigger": "Uelekezaji wa haraka",
+    "title": "Menyu ya amri",
+    "search": "Tafuta sehemu na miradi",
+    "empty": "Hakuna sehemu au miradi inayolingana.",
+    "about": "Kuhusu",
+    "skills": "Ujuzi",
+    "projects": "Miradi",
+    "experience": "Uzoefu",
+    "contact": "Mawasiliano"
   }
 }

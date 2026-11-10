@@ -6,7 +6,9 @@
     "experience": "Experience",
     "contact": "Contact",
     "letsConnect": "Let's Connect",
-    "skipToContent": "Skip to main content"
+    "skipToContent": "Skip to main content",
+    "themeToggle": "Toggle light and dark theme",
+    "language": "Language"
   },
   "hero": {
     "availability": "Available for freelance & remote work",
@@ -127,6 +129,7 @@
       "name": "Your Name",
       "email": "Your Email",
       "projectType": "Project Type",
+      "chooseType": "Choose a project type",
       "budget": "Budget Range (optional)",
       "message": "Message",
       "send": "Send Message",
@@ -148,5 +151,30 @@
   },
   "common": {
     "englishOnlyNote": "This case study is currently available only in English."
+  },
+  "projects": {
+    "title": "Selected Work",
+    "intro": "Product, engineering, and data projects shaped around real-world problems.",
+    "viewAll": "View all projects",
+    "categories": {
+      "filterLabel": "Filter projects by category",
+      "all": "All",
+      "web": "Web",
+      "data-ml": "Data & ML",
+      "saas": "SaaS",
+      "competition": "Competition",
+      "mobile": "Mobile"
+    }
+  },
+  "palette": {
+    "trigger": "Quick navigation",
+    "title": "Command palette",
+    "search": "Search sections and projects",
+    "empty": "No matching sections or projects.",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "experience": "Experience",
+    "contact": "Contact"
   }
 }

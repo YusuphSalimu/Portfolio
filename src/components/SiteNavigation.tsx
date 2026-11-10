@@ -12,6 +12,7 @@ export default function SiteNavigation() {
   const t = useTranslations("nav");
   const locale = useLocale();
   const pathname = usePathname();
+  const onHomePage = pathname === `/${locale}` || pathname === "/";
   const [menuOpen, setMenuOpen] = useState(false);
   const [lightTheme, setLightTheme] = useState(false);
   const menuButton = useRef<HTMLButtonElement>(null);
@@ -44,12 +45,12 @@ export default function SiteNavigation() {
           </Link>
           <nav className="desktop-nav" aria-label="Main navigation">
             {sectionLinks.map((section) => (
-              <a key={section} href={`#${section}`}>{t(section)}</a>
+              <a key={section} href={`${onHomePage ? "" : `/${locale}` }#${section}`}>{t(section)}</a>
             ))}
           </nav>
           <div className="site-header__actions">
             <label className="language-switcher">
-              <span className="visually-hidden">Language</span>
+              <span className="visually-hidden">{t("language")}</span>
               <select
                 value={locale}
                 onChange={(event) => {
@@ -63,10 +64,10 @@ export default function SiteNavigation() {
                 ))}
               </select>
             </label>
-            <button className="icon-button theme-toggle" type="button" onClick={toggleTheme} aria-label="Toggle light and dark theme">
+            <button className="icon-button theme-toggle" type="button" onClick={toggleTheme} aria-label={t("themeToggle")}>
               {lightTheme ? "☾" : "☼"}
             </button>
-            <a className="button button--primary header-connect" href="#contact">{t("letsConnect")}</a>
+            <a className="button button--primary header-connect" href={`${onHomePage ? "" : `/${locale}` }#contact`}>{t("letsConnect")}</a>
             <button
               ref={menuButton}
               className="icon-button mobile-menu-toggle"
@@ -88,9 +89,9 @@ export default function SiteNavigation() {
         aria-hidden={!menuOpen}
       >
         {sectionLinks.map((section) => (
-          <a key={section} href={`#${section}`} tabIndex={menuOpen ? 0 : -1}>{t(section)}</a>
+          <a key={section} href={`${onHomePage ? "" : `/${locale}` }#${section}`} tabIndex={menuOpen ? 0 : -1}>{t(section)}</a>
         ))}
-        <a className="button button--primary" href="#contact" tabIndex={menuOpen ? 0 : -1}>{t("letsConnect")}</a>
+        <a className="button button--primary" href={`${onHomePage ? "" : `/${locale}` }#contact`} tabIndex={menuOpen ? 0 : -1}>{t("letsConnect")}</a>
       </nav>
     </>
   );
