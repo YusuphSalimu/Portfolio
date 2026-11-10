@@ -15,7 +15,8 @@ for (const width of widths) {
 
     for (const route of routes) {
       test(`${route} has no horizontal overflow and shows its heading`, async ({ page }) => {
-        await page.goto(route);
+        const response = await page.goto(route);
+        expect(response?.status()).toBe(200);
         await expect(page.locator("h1").first()).toBeVisible();
         const dimensions = await page.evaluate(() => ({
           documentWidth: document.documentElement.scrollWidth,
