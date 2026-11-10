@@ -26,6 +26,15 @@ describe("project schema and loader", () => {
     expect(parseProject(validProject, "test-project").slug).toBe("test-project");
   });
 
+  it("accepts approved project summaries longer than 160 characters", () => {
+    expect(
+      parseProject(
+        { ...validProject, summary: "x".repeat(200) },
+        "test-project",
+      ).summary,
+    ).toHaveLength(200);
+  });
+
   it("rejects hero images with missing alt text", () => {
     expect(() =>
       parseProject(
@@ -50,6 +59,21 @@ describe("project schema and loader", () => {
         "test-project",
       ),
     ).toThrow(/must have a liveUrl/);
+  });
+
+  it("requires placeholder projects to be marked as drafts", () => {
+    expect(() =>
+      parseProject(
+        {
+          ...validProject,
+          heroImage: {
+            src: "/projects/_placeholder/hero.webp",
+            alt: "Shared project placeholder image",
+          },
+        },
+        "test-project",
+      ),
+    ).toThrow(/must be marked draft/);
   });
 
   it("excludes draft projects when loading in production mode", () => {

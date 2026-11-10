@@ -1,9 +1,8 @@
 "use client";
 
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
-import { useEffect, useRef, useState, type KeyboardEvent } from "react";
+import { useEffect, useRef, useState, type KeyboardEvent as ReactKeyboardEvent } from "react";
 import { routing } from "@/i18n/routing";
 import Logo from "@/components/brand/Logo";
 
@@ -42,7 +41,7 @@ export default function SiteNavigation() {
 
   useEffect(() => {
     if (!menuOpen) return;
-    function closeOnEscape(event: KeyboardEvent) {
+    function closeOnEscape(event: globalThis.KeyboardEvent) {
       if (event.key === "Escape") {
         setMenuOpen(false);
       }
@@ -55,7 +54,7 @@ export default function SiteNavigation() {
     window.location.assign(`/${nextLocale}${pathname.replace(/^\/(en|sw|fr)/, "") || ""}`);
   }
 
-  function handleMenuKeyDown(event: KeyboardEvent<HTMLElement>) {
+  function handleMenuKeyDown(event: ReactKeyboardEvent<HTMLElement>) {
     if (event.key !== "Tab" || !menuRef.current) return;
     const focusable = menuRef.current.querySelectorAll<HTMLElement>(
       'a[href], select:not([disabled])',

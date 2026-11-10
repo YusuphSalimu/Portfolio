@@ -76,6 +76,10 @@ for (const folder of fs.readdirSync(contentRoot, { withFileTypes: true }).filter
       errors.push(`${slug}: live projects require a valid liveUrl.`);
     }
 
+    if (project.draft && project.published) {
+      errors.push(`${slug}: draft projects cannot be published.`);
+    }
+
     const heroPath = getPublicFilePath(project.heroImage.src);
     const projectHeroPath = path.join(root, "public", "projects", slug, "hero.webp");
     const hasProjectHero = fs.existsSync(projectHeroPath);

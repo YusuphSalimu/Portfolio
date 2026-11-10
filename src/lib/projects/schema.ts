@@ -21,7 +21,7 @@ export const projectSchema = z
   .object({
     title: z.string().min(1),
     slug: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, "Use lowercase letters, numbers, and hyphens"),
-    summary: z.string().min(1).max(160),
+    summary: z.string().min(1).max(240),
     category: z.enum(["web", "data-ml", "saas", "competition", "mobile"]),
     status: z.enum(["live", "case-study", "competition"]),
     role: z.string().min(1),
@@ -30,6 +30,7 @@ export const projectSchema = z
     featured: z.boolean(),
     order: z.number().int(),
     published: z.boolean(),
+    draft: z.boolean().optional(),
     heroImage: imageSchema,
     features: z.array(z.string().min(1)).optional(),
     screenshots: z.array(imageSchema).optional(),
@@ -53,6 +54,14 @@ export const projectSchema = z
     seo: z.object({ description: z.string().min(1).max(320) }).optional(),
   })
   .superRefine((project, context) => {
+    if (project.heroImage.src === "/projects/_placeholder/hero.webp" && project.draft !== true) {
+      context.addIssue({
+        code: "custom",
+        path: ["draft"],
+        message: "Projects using the shared placeholder hero must be marked draft.",
+      });
+    }
+
     if (project.status === "live" && !project.liveUrl) {
       context.addIssue({
         code: "custom",
