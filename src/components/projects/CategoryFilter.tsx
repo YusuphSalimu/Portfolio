@@ -1,22 +1,17 @@
 "use client";
 
 import { usePathname, useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
 import type { ProjectCategory } from "@/lib/projects/schema";
 
-const categories: { value: ProjectCategory | "all"; label: string }[] = [
-  { value: "all", label: "All" },
-  { value: "web", label: "Web" },
-  { value: "data-ml", label: "Data & ML" },
-  { value: "saas", label: "SaaS" },
-  { value: "competition", label: "Competition" },
-  { value: "mobile", label: "Mobile" },
-];
+const categories: (ProjectCategory | "all")[] = ["all", "web", "data-ml", "saas", "competition", "mobile"];
 
 export default function CategoryFilter({
   activeCategory,
 }: {
   activeCategory: ProjectCategory | "all";
 }) {
+  const t = useTranslations("projects.categories");
   const router = useRouter();
   const pathname = usePathname();
 
@@ -26,7 +21,7 @@ export default function CategoryFilter({
   }
 
   return (
-    <div className="category-filter" role="group" aria-label="Filter projects by category">
+    <div className="category-filter" role="group" aria-label={t("filterLabel")}>
       {categories.map((category) => (
         <button
           key={category.value}
@@ -35,7 +30,7 @@ export default function CategoryFilter({
           className="category-filter__chip"
           onClick={() => selectCategory(category.value)}
         >
-          {category.label}
+          {t(category)}
         </button>
       ))}
     </div>

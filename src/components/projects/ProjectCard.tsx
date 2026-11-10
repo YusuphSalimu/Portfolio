@@ -1,5 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
+import { motion, useReducedMotion } from "motion/react";
+import { Link } from "@/i18n/routing";
 import type { ProjectEntry } from "@/lib/projects";
 import StatusBadge from "./StatusBadge";
 
@@ -18,17 +19,25 @@ export default function ProjectCard({
   project: ProjectEntry;
   priority?: boolean;
 }) {
+  const reducedMotion = useReducedMotion();
   const visibleStack = project.stack.slice(0, 4);
   const hiddenStackCount = project.stack.length - visibleStack.length;
 
   return (
-    <Link
-      href={`/projects/${project.slug}`}
-      className={`project-card glass-surface group block overflow-hidden rounded-3xl ${
-        project.featured ? "project-card--featured" : ""
-      }`}
+    <motion.div
+      className={`project-grid__item${project.featured ? " project-grid__item--featured" : ""}`}
+      initial={reducedMotion ? false : { opacity: 0, y: 18 }}
+      whileInView={reducedMotion ? undefined : { opacity: 1, y: 0 }}
+      whileHover={reducedMotion ? undefined : { y: -4, rotateX: 1, rotateY: -1 }}
+      viewport={{ once: true, amount: 0.12 }}
+      transition={{ duration: 0.35 }}
+      style={{ transformPerspective: 1000 }}
     >
-      <article>
+      <Link
+        href={`/projects/${project.slug}`}
+        className="project-card glass-surface group block overflow-hidden rounded-3xl"
+      >
+        <article>
         <div className="project-card__image">
           <Image
             src={project.heroImage.src}
@@ -57,7 +66,8 @@ export default function ProjectCard({
             View case study <span aria-hidden="true">→</span>
           </span>
         </div>
-      </article>
-    </Link>
+        </article>
+      </Link>
+    </motion.div>
   );
 }

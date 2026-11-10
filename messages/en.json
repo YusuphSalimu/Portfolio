@@ -1,0 +1,152 @@
+{
+  "nav": {
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "experience": "Experience",
+    "contact": "Contact",
+    "letsConnect": "Let's Connect",
+    "skipToContent": "Skip to main content"
+  },
+  "hero": {
+    "availability": "Available for freelance & remote work",
+    "greeting": "Hi, I'm Yusuph Salimu.",
+    "subtitle": "Software engineer building web platforms, business websites, and backend systems, with data and machine learning when needed, for clients in Tanzania and worldwide.",
+    "viewWork": "View my work",
+    "letsWork": "Let's work together",
+    "downloadCv": "Download CV",
+    "terminal": {
+      "whoami": "Yusuph Salimu",
+      "location": "Dodoma, Tanzania",
+      "status": "open to freelance & remote work",
+      "stack": "TypeScript · Next.js · Django"
+    }
+  },
+  "impact": {
+    "clientWebsites": "3 live client websites",
+    "siteLanguages": "3 site languages (EN · SW · FR)",
+    "location": "Dodoma, Tanzania",
+    "remoteReady": "Remote-ready"
+  },
+  "about": {
+    "title": "About Me",
+    "paragraph": "I am a Software Engineer based in Dodoma, Tanzania, passionate about building reliable, performant, and accessible digital products. With experience delivering production-ready websites and web platforms, I handle the full lifecycle from requirements and architecture to deployment and DNS/SSL configuration. I combine strong full-stack skills with practical data analysis and machine learning knowledge to solve real-world problems."
+  },
+  "services": {
+    "title": "Services",
+    "deploymentNote": "Hosting, deployment, DNS, and SSL setup included.",
+    "items": {
+      "websites": {
+        "title": "Business Websites & Catalogues",
+        "description": "Fast, responsive, and SEO-conscious websites designed to convert visitors into clients and present your business professionally."
+      },
+      "platforms": {
+        "title": "Web Platforms & Authentication",
+        "description": "Custom web applications featuring secure user authentication, multi-language support, and interactive portals."
+      },
+      "apis": {
+        "title": "Backend APIs & SaaS",
+        "description": "Robust REST APIs, background job processing, and backend systems built with Django, Node.js, or Spring Boot."
+      },
+      "ml": {
+        "title": "Data & Machine Learning",
+        "description": "Data cleaning, exploratory analysis, and predictive modeling using Python, Pandas, and scikit-learn."
+      }
+    }
+  },
+  "process": {
+    "title": "Process",
+    "steps": {
+      "discover": {
+        "title": "1. Discover",
+        "description": "We define requirements, target audience, and project goals."
+      },
+      "build": {
+        "title": "2. Build",
+        "description": "I develop the solution with clean code, testing, and modern standards."
+      },
+      "launch": {
+        "title": "3. Launch",
+        "description": "We deploy to production with custom domains, SSL, and performance optimization."
+      },
+      "support": {
+        "title": "4. Support",
+        "description": "Post-launch monitoring, maintenance, and updates to ensure smooth operation."
+      }
+    }
+  },
+  "experience": {
+    "title": "Experience & Education",
+    "timeline": {
+      "independent": {
+        "role": "Software Engineer",
+        "company": "Independent Client Projects",
+        "period": "Sep 2026 – Present",
+        "location": "Remote / Tanzania",
+        "description": "Delivered three production business websites for paying clients. Led requirements discussions, planning, implementation, testing, and launch. Managed GitHub repositories and live deployments, including hosting configuration and troubleshooting."
+      },
+      "udom": {
+        "role": "BSc Software Engineering",
+        "company": "University of Dodoma",
+        "period": "Oct 2023 – Jul 2027 (expected)",
+        "location": "Dodoma, Tanzania",
+        "description": "Selected for Huawei ICT Academy training in cloud computing and AI."
+      }
+    }
+  },
+  "skills": {
+    "title": "Skills & Technologies",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "data": "Data & ML",
+      "databases": "Databases",
+      "devops": "DevOps & Tools",
+      "web": "Web & Commerce"
+    }
+  },
+  "certificates": {
+    "title": "Certificates & Languages",
+    "certsTitle": "Certificates",
+    "langsTitle": "Languages",
+    "items": [
+      "Python Django 101 (Simplilearn SkillUp, Aug 2026)",
+      "Fundamentals of AI (Coursera, 2026)",
+      "AI Brainstorming Ideas (Coursera, 2026)"
+    ],
+    "languages": [
+      { "name": "Kiswahili", "level": "Bilingual" },
+      { "name": "English", "level": "Professional working" },
+      { "name": "Arabic", "level": "Conversational" }
+    ]
+  },
+  "contact": {
+    "title": "Let's work together.",
+    "subtitle": "Have a project in mind or want to discuss an opportunity? Feel free to reach out.",
+    "form": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "projectType": "Project Type",
+      "budget": "Budget Range (optional)",
+      "message": "Message",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "success": "Thank you! Your message has been sent.",
+      "error": "Failed to send message. Please try emailing directly at yusuphsaalim@gmail.com",
+      "types": {
+        "website": "Website",
+        "platform": "Web platform",
+        "backend": "Backend / SaaS",
+        "data": "Data / ML",
+        "other": "Other"
+      }
+    }
+  },
+  "footer": {
+    "shortLine": "Software engineer building web platforms, business websites, and backend systems.",
+    "rights": "All rights reserved."
+  },
+  "common": {
+    "englishOnlyNote": "This case study is currently available only in English."
+  }
+}

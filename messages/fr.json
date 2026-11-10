@@ -1,0 +1,56 @@
+{
+  "_comment": "Machine translation. Pending native review.",
+  "nav": { "about": "À propos", "skills": "Compétences", "projects": "Projets", "experience": "Expérience", "contact": "Contact", "letsConnect": "Me contacter", "skipToContent": "Aller au contenu principal" },
+  "hero": {
+    "availability": "Disponible pour du travail freelance et à distance",
+    "greeting": "Bonjour, je suis Yusuph Salimu.",
+    "subtitle": "Ingénieur logiciel créant des plateformes web, des sites d'entreprise et des systèmes backend, avec de la data et du machine learning si nécessaire, pour des clients en Tanzanie et dans le monde entier.",
+    "viewWork": "Voir mes projets", "letsWork": "Travaillons ensemble", "downloadCv": "Télécharger le CV",
+    "terminal": { "whoami": "Yusuph Salimu", "location": "Dodoma, Tanzanie", "status": "ouvert aux opportunités freelance et à distance", "stack": "TypeScript · Next.js · Django" }
+  },
+  "impact": { "clientWebsites": "3 sites clients en ligne", "siteLanguages": "3 langues de site (EN · SW · FR)", "location": "Dodoma, Tanzanie", "remoteReady": "Prêt pour le travail à distance" },
+  "about": {
+    "title": "À propos de moi",
+    "paragraph": "Je suis un ingénieur logiciel basé à Dodoma, en Tanzanie, passionné par la création de produits numériques fiables, performants et accessibles. Avec de l'expérience dans la livraison de sites web et de plateformes prêts pour la production, je gère l'ensemble du cycle de vie, des exigences et de l'architecture au déploiement et à la configuration DNS/SSL. Je combine de solides compétences full-stack avec une analyse pratique des données et du machine learning pour résoudre des problèmes réels."
+  },
+  "services": {
+    "title": "Services", "deploymentNote": "Hébergement, déploiement, DNS et configuration SSL inclus.",
+    "items": {
+      "websites": { "title": "Sites Web d'Entreprise & Catalogues", "description": "Sites rapides, réactifs et optimisés pour le SEO, conçus pour convertir les visiteurs en clients et présenter votre entreprise de manière professionnelle." },
+      "platforms": { "title": "Plateformes Web & Authentification", "description": "Applications web sur mesure avec authentification sécurisée des utilisateurs, support multilingue et portails interactifs." },
+      "apis": { "title": "APIs Backend & SaaS", "description": "APIs REST robustes, traitement de tâches en arrière-plan et systèmes backend développés avec Django, Node.js ou Spring Boot." },
+      "ml": { "title": "Data & Machine Learning", "description": "Nettoyage de données, analyse exploratoire et modélisation prédictive avec Python, Pandas et scikit-learn." }
+    }
+  },
+  "process": {
+    "title": "Processus",
+    "steps": {
+      "discover": { "title": "1. Découverte", "description": "Nous définissons les exigences, le public cible et les objectifs du projet." },
+      "build": { "title": "2. Développement", "description": "Je développe la solution avec un code propre, des tests et des normes modernes." },
+      "launch": { "title": "3. Lancement", "description": "Nous déployons en production avec votre domaine personnalisé, SSL et optimisation des performances." },
+      "support": { "title": "4. Support", "description": "Suivi post-lancement, maintenance et mises à jour pour assurer un fonctionnement fluide." }
+    }
+  },
+  "experience": {
+    "title": "Expérience & Éducation",
+    "timeline": {
+      "independent": { "role": "Ingénieur Logiciel", "company": "Projets Clients Indépendants", "period": "Sep 2026 – Présent", "location": "À distance / Tanzanie", "description": "Livraison de trois sites web d'entreprise en production pour des clients. Gestion des discussions sur les exigences, de la planification, de la mise en œuvre, des tests et du lancement. Gestion des dépôts GitHub et des déploiements en ligne, y compris la configuration de l'hébergement et le dépannage." },
+      "udom": { "role": "BSc Inginierie Logicielle", "company": "Université de Dodoma", "period": "Oct 2023 – Jul 2027 (prévu)", "location": "Dodoma, Tanzanie", "description": "Sélectionné pour la formation Huawei ICT Academy en cloud computing et IA." }
+    }
+  },
+  "skills": { "title": "Compétences & Technologies", "categories": { "frontend": "Frontend", "backend": "Backend", "data": "Data & ML", "databases": "Bases de données", "devops": "DevOps & Outils", "web": "Web & Commerce" } },
+  "certificates": {
+    "title": "Certificats & Langues", "certsTitle": "Certificats", "langsTitle": "Langues",
+    "items": [ "Python Django 101 (Simplilearn SkillUp, Aug 2026)", "Fundamentals of AI (Coursera, 2026)", "AI Brainstorming Ideas (Coursera, 2026)" ],
+    "languages": [ { "name": "Swahili", "level": "Bilingue" }, { "name": "Anglais", "level": "Professionnel" }, { "name": "Arabe", "level": "Conversationnel" } ]
+  },
+  "contact": {
+    "title": "Travaillons ensemble.", "subtitle": "Vous avez un projet en tête ou souhaitez discuter d'une opportunité ? N'hésitez pas à me contacter.",
+    "form": {
+      "name": "Votre nom", "email": "Votre e-mail", "projectType": "Type de projet", "budget": "Budget (optionnel)", "message": "Message", "send": "Envoyer le message", "sending": "Envoi en cours...", "success": "Merci ! Votre message a été envoyé.", "error": "Échec de l'envoi du message. Veuillez envoyer un e-mail directement à yusuphsaalim@gmail.com",
+      "types": { "website": "Site web", "platform": "Plateforme web", "backend": "Backend / SaaS", "data": "Data / ML", "other": "Autre" }
+    }
+  },
+  "footer": { "shortLine": "Ingénieur logiciel créant des plateformes web, des sites d'entreprise et des systèmes backend.", "rights": "Tous droits réservés." },
+  "common": { "englishOnlyNote": "L'étude de cas de ce projet est actuellement disponible uniquement en anglais." }
+}

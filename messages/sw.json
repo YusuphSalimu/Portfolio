@@ -1,0 +1,141 @@
+{
+  "_comment": "Machine translation. Pending native review.",
+  "nav": {
+    "about": "Kuhusu",
+    "skills": "Ujuzi",
+    "projects": "Miradi",
+    "experience": "Uzoefu",
+    "contact": "Mawasiliano",
+    "letsConnect": "Wasiliana Nami",
+    "skipToContent": "Ruka hadi kwenye yaliyomo"
+  },
+  "hero": {
+    "availability": "Niko wazi kwa kazi za kujitegemea na za mbali",
+    "greeting": "Habari, mimi ni Yusuph Salimu.",
+    "subtitle": "Mhandisi wa programu anayejenga mifumo ya wavuti, tovuti za biashara, na mifumo ya nyuma, pamoja na data na kujifunza kwa mashine inapohitajika, kwa wateja nchini Tanzania na ulimwenguni kote.",
+    "viewWork": "Tazama kazi zangu",
+    "letsWork": "Fanya kazi nami",
+    "downloadCv": "Pakua CV",
+    "terminal": {
+      "whoami": "Yusuph Salimu",
+      "location": "Dodoma, Tanzania",
+      "status": "wazi kwa kazi za kujitegemea na za mbali",
+      "stack": "TypeScript · Next.js · Django"
+    }
+  },
+  "impact": {
+    "clientWebsites": "Tovuti 3 za wateja ziko hewani",
+    "siteLanguages": "Lugha 3 za tovuti (EN · SW · FR)",
+    "location": "Dodoma, Tanzania",
+    "remoteReady": "Tayari kwa kazi za mbali"
+  },
+  "about": {
+    "title": "Kuhusu Mimi",
+    "paragraph": "Mimi ni Mhandisi wa Programu niliyepo Dodoma, Tanzania, mwenye shauku ya kujenga bidhaa za kidijitali za kuaminika, zenye utendaji wa juu, na zinazofikiwa na wote. Mwenye uzoefu wa kutoa tovuti na mifumo ya wavuti iliyokamilika, ninashughulikia mzunguko mzima kuanzia mahitaji na muundo hadi uwekaji hewani na usanidi wa DNS/SSL. Ninachanganya ujuzi thabiti wa full-stack na uchambuzi wa data na kujifunza kwa mashine ili kutatua changamoto za ulimwengu halisi."
+  },
+  "services": {
+    "title": "Huduma",
+    "deploymentNote": "Hosting, uwekaji hewani, DNS, na usanidi wa SSL vimejumuishwa.",
+    "items": {
+      "websites": {
+        "title": "Tovuti za Biashara na Katalogi",
+        "description": "Tovuti za haraka, zinazobadilika na kuzingatia SEO zilizoundwa kubadili wageni kuwa wateja na kuwasilisha biashara yako kwa kitaalamu."
+      },
+      "platforms": {
+        "title": "Mifumo ya Wavuti na Uthibitisho",
+        "description": "Programu za wavuti za kipekee zenye uthibitisho salama wa watumiaji, msaada wa lugha nyingi, na tovuti mbalimbali."
+      },
+      "apis": {
+        "title": "API za Nyuma na SaaS",
+        "description": "API thabiti za REST, uchanchaji wa kazi za nyuma, na mifumo ya nyuma iliyojengwa kwa Django, Node.js, au Spring Boot."
+      },
+      "ml": {
+        "title": "Data na Kujifunza kwa Mashine",
+        "description": "Usafishaji wa data, uchambuzi wa kina, na uundaji wa mifano ya utabiri kwa kutumia Python, Pandas, na scikit-learn."
+      }
+    }
+  },
+  "process": {
+    "title": "Mchakato",
+    "steps": {
+      "discover": { "title": "1. Gundua", "description": "Tunamfahamisha mahitaji, walengwa, na malengo ya mradi." },
+      "build": { "title": "2. Jenga", "description": "Ninatengeneza suluhisho kwa kutumia msimbo safi, majaribio, na viwango vya kisasa." },
+      "launch": { "title": "3. Zindua", "description": "Tunaweka hewani kwa kutumia kikoa chako, SSL, na uboreshaji wa utendaji." },
+      "support": { "title": "4. Msaada", "description": "Ufuatiliaji baada ya uzinduzi, matengenezo, na sasisho ili kuhakikisha uendeshaji mzuri." }
+    }
+  },
+  "experience": {
+    "title": "Uzoefu na Elimu",
+    "timeline": {
+      "independent": {
+        "role": "Mhandisi wa Programu",
+        "company": "Miradi ya Wateja wa Kujitegemea",
+        "period": "Sep 2026 – Sasa",
+        "location": "Mbali / Tanzania",
+        "description": "Nilitoa tovuti tatu za biashara kwa wateja wanaolipa. Nilionsha majadiliano ya mahitaji, mipango, utekelezaji, majaribio, na uzinduzi. Nilimamaza ghala za GitHub na uwekaji hewani, ikiwa ni pamoja na usanidi wa hosting na kutatua matatizo."
+      },
+      "udom": {
+        "role": "BSc Mhandisi wa Programu",
+        "company": "Chuo Kikuu cha Dodoma",
+        "period": "Okt 2023 – Jul 2027 (inayotarajiwa)",
+        "location": "Dodoma, Tanzania",
+        "description": "Nilichaguliwa kwa mafunzo ya Huawei ICT Academy katika kompyuta ya wingu na AI."
+      }
+    }
+  },
+  "skills": {
+    "title": "Ujuzi na Teknolojia",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "data": "Data na ML",
+      "databases": "Mifumo ya Data",
+      "devops": "DevOps na Zana",
+      "web": "Wavuti na Biashara"
+    }
+  },
+  "certificates": {
+    "title": "Vyeti na Lugha",
+    "certsTitle": "Vyeti",
+    "langsTitle": "Lugha",
+    "items": [
+      "Python Django 101 (Simplilearn SkillUp, Aug 2026)",
+      "Fundamentals of AI (Coursera, 2026)",
+      "AI Brainstorming Ideas (Coursera, 2026)"
+    ],
+    "languages": [
+      { "name": "Kiswahili", "level": "Lugha mama" },
+      { "name": "Kiingereza", "level": "Kazi za kitaalamu" },
+      { "name": "Kiarabu", "level": "Mazungumzo" }
+    ]
+  },
+  "contact": {
+    "title": "Fanya kazi nami.",
+    "subtitle": "Je, unayo mradi au unataka kujadili fursa? Jisikie huru kuwasiliana nami.",
+    "form": {
+      "name": "Jina Lako",
+      "email": "Barua Pepe Yako",
+      "projectType": "Aina ya Mradi",
+      "budget": "Bajeti (sio lazima)",
+      "message": "Ujumbe",
+      "send": "Tuma Ujumbe",
+      "sending": "Inatuma...",
+      "success": "Asante! Ujumbe wako umetumwa.",
+      "error": "Imeshindwa kutuma ujumbe. Tafadhali tuma barua pepe moja kwa moja kwa yusuphsaalim@gmail.com",
+      "types": {
+        "website": "Tovuti",
+        "platform": "Mfumo wa wavuti",
+        "backend": "Backend / SaaS",
+        "data": "Data / ML",
+        "other": "Mengineyo"
+      }
+    }
+  },
+  "footer": {
+    "shortLine": "Mhandisi wa programu anayejenga mifumo ya wavuti, tovuti za biashara, na mifumo ya nyuma.",
+    "rights": "Haki zote zimehifadhiwa."
+  },
+  "common": {
+    "englishOnlyNote": "Uchambuzi wa mradi huu kwa sasa unapatikana kwa Kiingereza tu."
+  }
+}
