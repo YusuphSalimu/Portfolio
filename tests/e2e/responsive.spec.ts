@@ -26,7 +26,44 @@ for (const width of widths) {
           viewportWidth: window.innerWidth,
         }));
         expect(dimensions.documentWidth).toBeLessThanOrEqual(dimensions.viewportWidth);
+
+        if (route === "/en") {
+          await expect(page.locator("#projects .project-card h2")).toHaveText([
+            "Zantan Company Website",
+            "Zantan Mining Platform",
+            "Ayaven Kids Events Hub",
+            "Hardware Stores",
+          ]);
+          if (width < 760) {
+            await expect(page.locator('input[name="email"]')).toHaveCSS("font-size", "16px");
+            const toggle = page.locator(".mobile-menu-toggle");
+            const menu = page.locator("#mobile-navigation");
+            await toggle.click();
+            await expect(toggle).toHaveAttribute("aria-expanded", "true");
+            await expect(menu.locator("a").first()).toBeFocused();
+            await expect(menu.locator("select")).toBeVisible();
+            await page.keyboard.press("Escape");
+            await expect(toggle).toBeFocused();
+            await expect(toggle).toHaveAttribute("aria-expanded", "false");
+            await toggle.click();
+            await page.locator(".mobile-navigation-backdrop").click({ position: { x: 10, y: 10 } });
+            await expect(toggle).toHaveAttribute("aria-expanded", "false");
+            await expect(toggle).toBeFocused();
+          }
+        }
       });
     }
+
+    test("client gallery preserves the full screenshot and responsive columns", async ({ page }) => {
+      await page.goto("/en/projects/zantan-company");
+      const gallery = page.locator(".project-gallery");
+      const columns = await gallery.evaluate((element) => getComputedStyle(element).gridTemplateColumns.split(" ").length);
+      expect(columns).toBe(width <= 760 ? 1 : width <= 980 ? 2 : 3);
+      await gallery.locator("button").first().click();
+      await expect(page.locator(".lightbox__image img")).toHaveCSS("object-fit", "contain");
+      await expect(page.getByRole("button", { name: "Close screenshot" })).toBeFocused();
+      await page.keyboard.press("Escape");
+      await expect(gallery.locator("button").first()).toBeFocused();
+    });
   });
 }
