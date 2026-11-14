@@ -4,10 +4,11 @@
 
 - Confirmed the homepage order: Zantan Company, Zantan Mining, Ayaven Kids, then Hardware Stores.
 - Re-encoded the three client hero images at WebP quality 80, under 300 KB, and preserved full screenshot proportions in gallery copies. Owner originals remain unchanged.
-- Fixed the mobile gallery column override and lightbox cropping, aligned headline letter spacing, increased navigation/title tap targets, and ensured mobile form/search inputs use 16px text.
+- Fixed the mobile gallery column override, lightbox cropping, and mobile-menu focus timing; aligned headline letter spacing, increased navigation/title tap targets, and ensured mobile form/search inputs use 16px text.
 - Kept image priority on the first project card; other content images lazy-load.
 - Embedded licensed Space Grotesk fonts in Open Graph rendering and refreshed the social preview.
 - Extended responsive checks to cover project ordering, mobile menu focus/dismissal, gallery columns, and full-image lightbox rendering.
+- Validation: lint, TypeScript, all 8 unit tests, all 8 project entries, production build, and all 24 Playwright checks passed (6 each at 375, 390, 768, and 1280px). The seven required local routes returned HTTP 200.
 - Owner TODO: confirm written permission before adding client logos; arrange native review of Swahili and French text; upload the refreshed social preview in GitHub repository settings if used there.
 
 ## Phase 4 — Client projects, responsive layout, and branding (2026-11-10)
