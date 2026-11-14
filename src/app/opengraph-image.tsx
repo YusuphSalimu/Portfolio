@@ -1,11 +1,17 @@
 import { ImageResponse } from "next/og";
+import { readFile } from "node:fs/promises";
+import path from "node:path";
 
-export const runtime = "edge";
+export const runtime = "nodejs";
 export const alt = "Yusuph Salimu — Software Engineer and Full-Stack Developer";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-export default function OpenGraphImage() {
+export default async function OpenGraphImage() {
+  const [regular, bold] = await Promise.all([
+    readFile(path.join(process.cwd(), "src/assets/fonts/SpaceGrotesk-Regular.ttf")),
+    readFile(path.join(process.cwd(), "src/assets/fonts/SpaceGrotesk-Bold.ttf")),
+  ]);
   return new ImageResponse(
     (
       <div
@@ -22,11 +28,17 @@ export default function OpenGraphImage() {
         }}
       >
         <div style={{ color: "#b7aaff", fontSize: 24, letterSpacing: 4, marginBottom: 26 }}>YUSUPH.DEV</div>
-        <div style={{ fontSize: 76, fontWeight: 700, letterSpacing: -4, lineHeight: 1.05 }}>Yusuph Salimu</div>
+        <div style={{ fontSize: 76, fontWeight: 700, letterSpacing: -1.52, lineHeight: 1.05 }}>Yusuph Salimu</div>
         <div style={{ color: "#d0ccdb", fontSize: 34, marginTop: 22 }}>Software Engineer | Full-Stack Developer</div>
         <div style={{ display: "flex", width: 190, height: 8, marginTop: 48, borderRadius: 8, background: "linear-gradient(90deg,#7c5cff,#4f8cff)" }} />
       </div>
     ),
-    { ...size },
+    {
+      ...size,
+      fonts: [
+        { name: "Space Grotesk", data: regular, weight: 400, style: "normal" },
+        { name: "Space Grotesk", data: bold, weight: 700, style: "normal" },
+      ],
+    },
   );
 }

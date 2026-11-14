@@ -113,7 +113,6 @@ export default async function HomePage() {
                 alt="Portrait of Yusuph Salimu"
                 width={826}
                 height={1062}
-                priority
                 sizes="(min-width: 1024px) 360px, (min-width: 640px) 50vw, 100vw"
               />
             </div>

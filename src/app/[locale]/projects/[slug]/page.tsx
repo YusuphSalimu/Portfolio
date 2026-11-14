@@ -85,7 +85,6 @@ export default async function ProjectCaseStudy({
           alt={project.heroImage.alt}
           width={1600}
           height={900}
-          priority
           sizes="(min-width: 1024px) 360px, (min-width: 640px) 50vw, 100vw"
         />
         <div className="case-study__hero-shade" />
