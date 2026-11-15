@@ -22,15 +22,15 @@ export default async function OpenGraphImage() {
           flexDirection: "column",
           justifyContent: "center",
           padding: "76px",
-          color: "#f4f2ff",
-          background: "radial-gradient(circle at 88% 18%, rgba(79,140,255,.32), transparent 34%), linear-gradient(130deg,#0a0a0f 30%,#17132a 100%)",
+          color: "#edf5f4",
+          background: "radial-gradient(circle at 88% 18%, rgba(124,228,200,.2), transparent 40%), linear-gradient(130deg,#0b151b 30%,#16372f 100%)",
           fontFamily: "Space Grotesk, sans-serif",
         }}
       >
-        <div style={{ color: "#b7aaff", fontSize: 24, letterSpacing: 4, marginBottom: 26 }}>YUSUPH.DEV</div>
+        <div style={{ color: "#7ce4c8", fontSize: 28, letterSpacing: 2, marginBottom: 26 }}>&lt;Yusuph.dev/&gt;</div>
         <div style={{ fontSize: 76, fontWeight: 700, letterSpacing: -1.52, lineHeight: 1.05 }}>Yusuph Salimu</div>
-        <div style={{ color: "#d0ccdb", fontSize: 34, marginTop: 22 }}>Software Engineer | Full-Stack Developer</div>
-        <div style={{ display: "flex", width: 190, height: 8, marginTop: 48, borderRadius: 8, background: "linear-gradient(90deg,#7c5cff,#4f8cff)" }} />
+        <div style={{ color: "#a5bac2", fontSize: 34, marginTop: 22 }}>Software Engineer | Full-Stack Developer</div>
+        <div style={{ display: "flex", width: 190, height: 8, marginTop: 48, borderRadius: 8, background: "linear-gradient(90deg,#7ce4c8,#398875)" }} />
       </div>
     ),
     {
