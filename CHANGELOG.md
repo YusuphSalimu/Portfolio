@@ -8,6 +8,7 @@
 - Documented Resend test-sender restrictions and production environment setup; ignored local environment files and added eight mocked contact-delivery tests.
 - Live Resend delivery remains unverified: this checkout has no API key or authenticated access to the deployment's environment settings/logs.
 - Disabled metadata streaming to resolve an intermittent outer-layout hydration mismatch on reload; eight repetitions of the previously failing theme/reload check passed.
+- Validation: lint, production build/type checks, 16 unit tests, and all 35 browser tests passed. Reviewed service/contact icons at desktop and mobile sizes.
 
 ## Portfolio refresh — Motion, themes, and compact work grid (2026-11-15)
 
