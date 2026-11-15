@@ -7,6 +7,7 @@
 - Default the contact recipient to the owner's published inbox, trim environment values, validate recipient configuration, and handle provider exceptions. Resend failures now log safe diagnostic reasons without form contents or credentials.
 - Documented Resend test-sender restrictions and production environment setup; ignored local environment files and added eight mocked contact-delivery tests.
 - Live Resend delivery remains unverified: this checkout has no API key or authenticated access to the deployment's environment settings/logs.
+- Disabled metadata streaming to resolve an intermittent outer-layout hydration mismatch on reload; eight repetitions of the previously failing theme/reload check passed.
 
 ## Portfolio refresh — Motion, themes, and compact work grid (2026-11-15)
 

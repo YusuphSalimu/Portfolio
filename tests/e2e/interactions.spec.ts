@@ -100,6 +100,9 @@ test("quick navigation is removed from case studies and homepage", async ({ page
 });
 
 test("Y favicons are discoverable and served in raster and vector formats", async ({ page, request }) => {
+  const documentResponse = await request.get("/en");
+  const html = await documentResponse.text();
+  expect(html.split("</head>")[0]).toContain('name="description"');
   await page.goto("/en");
   await expect(page.locator('link[rel="icon"][href="/favicon-96.png"]')).toHaveAttribute("sizes", "96x96");
   for (const path of ["/favicon.ico", "/favicon-96.png", "/apple-touch-icon.png", "/icon.svg"]) {
