@@ -5,6 +5,7 @@
 - Audited remaining dropdowns and replaced the Project Type native popup with a reusable themed form selector matching the language picker.
 - Added selected-item checkmarks, keyboard navigation and type-ahead, Escape/outside dismissal, and light/dark styling.
 - Preserve required-field validation, submission values, and successful form reset; added a browser check using mocked contact delivery.
+- Validation: lint, production build/type checks, and three focused browser tests passed. Reviewed the open menu at desktop/dark and mobile/light sizes and confirmed selection works without horizontal overflow.
 
 ## Compact navigation and footer (2026-11-15)
 
