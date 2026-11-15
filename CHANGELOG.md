@@ -1,5 +1,12 @@
 # Changelog
 
+## Compact navigation and footer (2026-11-15)
+
+- Reduced header height and footer padding, including the unused bottom space on mobile.
+- Replaced native language selects with theme-matched disclosures showing full language names and the active language. Preserve the current route, query, and anchor when switching languages; support keyboard focus, Escape, and outside-click dismissal.
+- Removed the hero's unexplained pause-symbol button and retained system reduced-motion support.
+- Added a shaded, dimensional map pin beside Dodoma, Tanzania.
+
 ## Service motion and process journey (2026-11-15)
 
 - Added gentle, staggered 3D rotation to all four service icons and the selected service tile, with a shared pause control.

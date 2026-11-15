@@ -11,6 +11,9 @@ test("language picker supports dismissal and preserves the current page", async 
   await expect(trigger).toHaveAttribute("aria-expanded", "false");
   await expect(trigger).toBeFocused();
   await trigger.click();
+  await page.locator("h1").click();
+  await expect(trigger).toHaveAttribute("aria-expanded", "false");
+  await trigger.click();
   await picker.getByRole("link", { name: "SW Kiswahili" }).click();
   await expect(page).toHaveURL(/\/sw\/projects\?view=all#main-content$/);
   await expect(page.locator(".site-header .language-trigger")).toContainText("SW");
