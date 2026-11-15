@@ -87,12 +87,16 @@ test("reduced motion disables automatic hero movement", async ({ page }) => {
   await expect(page.locator(".scene-control")).toBeDisabled();
 });
 
-test("command palette returns from a case study to a home section", async ({ page }) => {
+test("quick navigation is removed from case studies and homepage", async ({ page }) => {
   await page.goto("/en/projects/hardware-stores");
+  await expect(page.locator(".palette-trigger, .command-dialog")).toHaveCount(0);
   await page.keyboard.press("Control+k");
-  await page.getByRole("dialog").getByRole("link", { name: "About", exact: true }).click();
-  await expect(page).toHaveURL(/\/en#about$/);
-  await expect(page.locator("#about")).toBeInViewport();
+  await expect(page.getByRole("dialog")).toHaveCount(0);
+  await page.goto("/en");
+  await expect(page.locator(".palette-trigger, .command-dialog")).toHaveCount(0);
+  await expect(page.locator(".contact-icon svg")).toHaveCount(4);
+  await expect(page.locator(".service-tab__icon svg")).toHaveCount(4);
+  await expect(page.locator("body")).not.toContainText("↗");
 });
 
 test("Y favicons are discoverable and served in raster and vector formats", async ({ page, request }) => {

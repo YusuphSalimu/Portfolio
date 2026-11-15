@@ -99,9 +99,9 @@ export default async function ProjectCaseStudy({
       {locale !== "en" && <p className="language-note">{t("englishOnlyNote")}</p>}
 
       <div className="case-study__actions">
-        {project.status === "live" && project.liveUrl && <a className="button button--primary" href={project.liveUrl} target="_blank" rel="noreferrer">Visit live project <span aria-hidden="true">↗</span></a>}
-        {project.repoUrl && <a className="button" href={project.repoUrl} target="_blank" rel="noreferrer">Repository <span aria-hidden="true">↗</span></a>}
-        {project.videoUrl && <a className="button" href={project.videoUrl} target="_blank" rel="noreferrer">Watch demo <span aria-hidden="true">↗</span></a>}
+        {project.status === "live" && project.liveUrl && <a className="button button--primary" href={project.liveUrl} target="_blank" rel="noreferrer">Visit live project </a>}
+        {project.repoUrl && <a className="button" href={project.repoUrl} target="_blank" rel="noreferrer">Repository </a>}
+        {project.videoUrl && <a className="button" href={project.videoUrl} target="_blank" rel="noreferrer">Watch demo </a>}
       </div>
 
       <section className="case-study__facts" aria-label="Project details">

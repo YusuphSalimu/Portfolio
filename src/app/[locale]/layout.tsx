@@ -5,8 +5,6 @@ import { routing } from "@/i18n/routing";
 import type { Metadata } from "next";
 import SiteNavigation from "@/components/SiteNavigation";
 import SiteFooter from "@/components/SiteFooter";
-import CommandPalette from "@/components/CommandPalette";
-import { getAllProjects } from "@/lib/projects";
 
 export const metadata: Metadata = {
   alternates: {
@@ -33,13 +31,11 @@ export default async function LocaleLayout({
 
   setRequestLocale(locale);
   const messages = await getMessages();
-  const projects = getAllProjects();
 
   return (
     <NextIntlClientProvider messages={messages}>
       <div lang={locale} className="locale-shell">
         <SiteNavigation />
-        <CommandPalette projects={projects} />
         {children}
         <SiteFooter />
       </div>

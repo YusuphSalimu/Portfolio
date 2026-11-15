@@ -2,19 +2,19 @@
 
 import { useRef, useState } from "react";
 import { useTranslations } from "next-intl";
+import { PanelsTopLeft, ShieldCheck, ServerCog, BrainCircuit } from "lucide-react";
 
 const services = [
-  { key: "websites", icon: "◫" },
-  { key: "platforms", icon: "◈" },
-  { key: "apis", icon: "⌘" },
-  { key: "ml", icon: "⌁" },
+  { key: "websites", icon: PanelsTopLeft },
+  { key: "platforms", icon: ShieldCheck },
+  { key: "apis", icon: ServerCog },
+  { key: "ml", icon: BrainCircuit },
 ] as const;
 
 export default function ServicesExplorer() {
   const t = useTranslations("services");
   const [selected, setSelected] = useState(0);
   const tabs = useRef<(HTMLButtonElement | null)[]>([]);
-  const current = services[selected];
 
   return (
     <div className="services-explorer">
@@ -32,15 +32,15 @@ export default function ServicesExplorer() {
               else return;
               event.preventDefault(); setSelected(next); tabs.current[next]?.focus();
             }}>
-            <span className="service-tab__icon" aria-hidden="true">{service.icon}</span>
-            <span>{t(`items.${service.key}.title`)}</span><span aria-hidden="true">↗</span>
+            <span className="service-tab__icon" aria-hidden="true"><service.icon /></span>
+            <span>{t(`items.${service.key}.title`)}</span>
           </button>
         ))}
       </div>
       {services.map((service, index) => (
         <div key={service.key} role="tabpanel" id={`service-panel-${service.key}`}
           aria-labelledby={`service-tab-${service.key}`} hidden={selected !== index} tabIndex={0} className="service-panel">
-          <div className="service-visual" aria-hidden="true"><span>{current.icon}</span><i /><i /><i /></div>
+          <div className="service-visual" aria-hidden="true"><span className="service-icon-plinth"><service.icon strokeWidth={1.6} /></span></div>
           <p className="eyebrow">0{index + 1} / {t("title")}</p>
           <h3>{t(`items.${service.key}.title`)}</h3>
           <p>{t(`items.${service.key}.description`)}</p>

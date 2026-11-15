@@ -34,7 +34,7 @@ export default function ProjectCard({
     >
       <article className="project-card glass-surface">
         <Link className="project-card__preview" href={`/projects/${project.slug}`} aria-label={`${t("caseStudy")}: ${project.title}`} tabIndex={-1}>
-          <div className="preview-chrome" aria-hidden="true"><span><i /><i /><i /></span><span>{project.liveUrl ? new URL(project.liveUrl).hostname : project.slug}</span><span>↗</span></div>
+          <div className="preview-chrome" aria-hidden="true"><span><i /><i /><i /></span><span>{project.liveUrl ? new URL(project.liveUrl).hostname : project.slug}</span></div>
           <div className="project-card__image">
           <Image
             src={preview.src}
@@ -68,7 +68,7 @@ export default function ProjectCard({
             </Link>
             {project.liveUrl && (
               <a className="button" href={project.liveUrl} target="_blank" rel="noreferrer">
-                {t("visitSite")} <span aria-hidden="true">↗</span>
+                {t("visitSite")}
               </a>
             )}
           </div>

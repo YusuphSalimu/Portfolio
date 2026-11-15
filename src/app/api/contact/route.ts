@@ -59,38 +59,55 @@ export async function POST(request: Request) {
     return Response.json({ message: "The form could not be submitted. Please email me directly." }, { status: 400 });
   }
 
-  const apiKey = process.env.RESEND_API_KEY;
-  const contactTo = process.env.CONTACT_TO;
-  if (!apiKey || !contactTo) {
+  const apiKey = process.env.RESEND_API_KEY?.trim();
+  const contactTo = process.env.CONTACT_TO?.trim() || "yusuphsaalim@gmail.com";
+  const contactFrom = process.env.CONTACT_FROM?.trim() || "onboarding@resend.dev";
+  if (!apiKey) {
+    console.error("Contact email configuration error", { reason: "missing_api_key" });
     return Response.json({
+      code: "EMAIL_NOT_CONFIGURED",
       message: "Email delivery is not configured yet. Please contact me directly at yusuphsaalim@gmail.com.",
     }, { status: 503 });
   }
-
-  const resend = new Resend(apiKey);
-  const { data, error } = await resend.emails.send({
-    from: process.env.CONTACT_FROM || "onboarding@resend.dev",
-    to: contactTo,
-    replyTo: parsed.data.email,
-    subject: `Portfolio inquiry: ${parsed.data.projectType}`,
-    text: [
-      `Name: ${parsed.data.name}`,
-      `Email: ${parsed.data.email}`,
-      `Project type: ${parsed.data.projectType}`,
-      `Budget: ${parsed.data.budget || "Not provided"}`,
-      "",
-      parsed.data.message,
-    ].join("\n"),
-  });
-
-  if (error) {
-    console.error("Contact email delivery failed", error);
-    return Response.json({ message: "Email delivery failed. Please email me directly at yusuphsaalim@gmail.com." }, { status: 502 });
-  }
-  if (!data?.id) {
-    console.error("Contact email delivery returned no message identifier");
-    return Response.json({ message: "Email delivery could not be confirmed. Please email me directly." }, { status: 502 });
+  if (!z.string().email().safeParse(contactTo).success) {
+    console.error("Contact email configuration error", { reason: "invalid_recipient" });
+    return Response.json({ code: "EMAIL_NOT_CONFIGURED", message: "Email delivery is unavailable. Please email me directly at yusuphsaalim@gmail.com." }, { status: 503 });
   }
 
-  return Response.json({ message: "Thank you! Your message has been sent." });
+  try {
+    const resend = new Resend(apiKey);
+    const { data, error } = await resend.emails.send({
+      from: contactFrom,
+      to: contactTo,
+      replyTo: parsed.data.email,
+      subject: `Portfolio inquiry: ${parsed.data.projectType}`,
+      text: [
+        `Name: ${parsed.data.name}`,
+        `Email: ${parsed.data.email}`,
+        `Project type: ${parsed.data.projectType}`,
+        `Budget: ${parsed.data.budget || "Not provided"}`,
+        "",
+        parsed.data.message,
+      ].join("\n"),
+    });
+
+    if (error) {
+      // Keep actionable diagnostics in server logs without logging credentials or form contents.
+      const reason = /only send testing emails/i.test(error.message) ? "test_sender_recipient_restricted"
+        : /domain.*not verified|verify.*domain/i.test(error.message) ? "sender_domain_not_verified"
+        : /api.key|unauthorized|restricted.*domain/i.test(error.message) ? "api_key_invalid_or_restricted"
+        : error.name;
+      console.error("Contact email delivery failed", { reason, provider: "resend", statusCode: error.statusCode });
+      return Response.json({ code: "EMAIL_PROVIDER_REJECTED", message: "Email delivery failed. Please email me directly at yusuphsaalim@gmail.com." }, { status: 502 });
+    }
+    if (!data?.id) {
+      console.error("Contact email delivery returned no message identifier");
+      return Response.json({ message: "Email delivery could not be confirmed. Please email me directly." }, { status: 502 });
+    }
+
+    return Response.json({ message: "Thank you! Your message has been sent." });
+  } catch {
+    console.error("Contact email delivery failed", { reason: "provider_request_failed", provider: "resend" });
+    return Response.json({ code: "EMAIL_PROVIDER_UNAVAILABLE", message: "Email delivery is temporarily unavailable. Please try again or email me directly at yusuphsaalim@gmail.com." }, { status: 502 });
+  }
 }

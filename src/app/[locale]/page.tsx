@@ -8,6 +8,7 @@ import Reveal from "@/components/Reveal";
 import Testimonials from "@/components/Testimonials";
 import HeroIdentity from "@/components/HeroIdentity";
 import ServicesExplorer from "@/components/ServicesExplorer";
+import ContactIcon from "@/components/ContactIcon";
 
 const skillGroups = {
   frontend: ["TypeScript", "JavaScript", "HTML5", "CSS3", "Next.js", "React", "Angular"],
@@ -42,10 +43,10 @@ export default async function HomePage() {
   const projects = getAllProjects({ environment: "production" });
   const testimonials: never[] = [];
   const contactCards = [
-    { label: "Email", value: "yusuphsaalim@gmail.com", href: "mailto:yusuphsaalim@gmail.com", icon: "✉" },
-    { label: "Phone", value: "+255 716 474 311", href: "tel:+255716474311", icon: "↗" },
-    { label: "LinkedIn", value: "Connect on LinkedIn", href: "https://www.linkedin.com/in/yusuph-salimu-7818333aa/", icon: "in" },
-    { label: "GitHub", value: "YusuphSalimu", href: "https://github.com/YusuphSalimu", icon: "⌘" },
+    { label: "Email", value: "yusuphsaalim@gmail.com", href: "mailto:yusuphsaalim@gmail.com" },
+    { label: "Phone", value: "+255 716 474 311", href: "tel:+255716474311" },
+    { label: "LinkedIn", value: "Connect on LinkedIn", href: "https://www.linkedin.com/in/yusuph-salimu-7818333aa/" },
+    { label: "GitHub", value: "YusuphSalimu", href: "https://github.com/YusuphSalimu" },
   ];
   const personSchema = {
     "@context": "https://schema.org",
@@ -208,7 +209,7 @@ export default async function HomePage() {
               <div className="contact-cards">
                 {contactCards.map((card) => (
                   <a className="glass-surface contact-card" href={card.href} key={card.label} target={card.href.startsWith("http") ? "_blank" : undefined} rel={card.href.startsWith("http") ? "noreferrer" : undefined}>
-                    <span aria-hidden="true">{card.icon}</span><span><small>{card.label}</small><strong>{card.value}</strong></span><span aria-hidden="true">↗</span>
+                    <span className={`contact-icon contact-icon--${card.label.toLowerCase()}`}><ContactIcon name={card.label} /></span><span><small>{card.label}</small><strong>{card.value}</strong></span>
                   </a>
                 ))}
               </div>
