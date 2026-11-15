@@ -1,5 +1,13 @@
 # Changelog
 
+## Contact and icon cleanup (2026-11-15)
+
+- Removed the quick-navigation trigger, dialog, and shortcut from all localized pages; removed northeast-arrow decorations throughout the site.
+- Replaced service glyphs with Lucide SVG icons on raised tiles and contact glyphs with mail/phone icons and Font Awesome GitHub/LinkedIn brand marks.
+- Default the contact recipient to the owner's published inbox, trim environment values, validate recipient configuration, and handle provider exceptions. Resend failures now log safe diagnostic reasons without form contents or credentials.
+- Documented Resend test-sender restrictions and production environment setup; ignored local environment files and added eight mocked contact-delivery tests.
+- Live Resend delivery remains unverified: this checkout has no API key or authenticated access to the deployment's environment settings/logs.
+
 ## Portfolio refresh — Motion, themes, and compact work grid (2026-11-15)
 
 - Studied https://eleo.netlify.app/ in Chromium and adapted its floating hero identity, interactive service selection, and project presentation into an original design.
