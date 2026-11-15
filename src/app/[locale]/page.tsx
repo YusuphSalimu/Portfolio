@@ -9,6 +9,7 @@ import Testimonials from "@/components/Testimonials";
 import HeroIdentity from "@/components/HeroIdentity";
 import ServicesExplorer from "@/components/ServicesExplorer";
 import ContactIcon from "@/components/ContactIcon";
+import LocationPin from "@/components/LocationPin";
 import ProcessJourney from "@/components/ProcessJourney";
 
 const skillGroups = {
@@ -107,7 +108,7 @@ export default async function HomePage() {
               <p className="eyebrow">01 / {t("nav.about")}</p>
               <h2 className="section-title" id="about-title">{t("about.title")}</h2>
               <p>{t("about.paragraph")}</p>
-              <p className="location-note">⌖ Dodoma, Tanzania</p>
+              <p className="location-note"><LocationPin /> Dodoma, Tanzania</p>
             </div>
           </Reveal>
         </section>

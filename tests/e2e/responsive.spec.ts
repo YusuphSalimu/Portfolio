@@ -44,7 +44,7 @@ for (const width of widths) {
             await toggle.click();
             await expect(toggle).toHaveAttribute("aria-expanded", "true");
             await expect(menu.locator("a").first()).toBeFocused();
-            await expect(menu.locator("select")).toBeVisible();
+            await expect(menu.locator(".language-trigger")).toBeVisible();
             await page.keyboard.press("Escape");
             await expect(toggle).toBeFocused();
             await expect(toggle).toHaveAttribute("aria-expanded", "false");

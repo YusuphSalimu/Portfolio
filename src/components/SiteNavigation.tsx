@@ -3,7 +3,7 @@
 import { usePathname } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
 import { useEffect, useRef, useState, type KeyboardEvent as ReactKeyboardEvent } from "react";
-import { routing } from "@/i18n/routing";
+import LanguageSwitcher from "./LanguageSwitcher";
 import Logo from "@/components/brand/Logo";
 import ScrollProgress from "./ScrollProgress";
 
@@ -59,15 +59,11 @@ export default function SiteNavigation() {
     return () => window.removeEventListener("keydown", closeOnEscape);
   }, [menuOpen]);
 
-  function changeLocale(nextLocale: string) {
-    window.location.assign(`/${nextLocale}${pathname.replace(/^\/(en|sw|fr)/, "") || ""}${window.location.search}${window.location.hash}`);
-  }
-
   function handleMenuKeyDown(event: ReactKeyboardEvent<HTMLElement>) {
     if (event.key !== "Tab" || !menuRef.current) return;
-    const focusable = menuRef.current.querySelectorAll<HTMLElement>(
-      'a[href], select:not([disabled])',
-    );
+    const focusable = Array.from(menuRef.current.querySelectorAll<HTMLElement>(
+      'a[href], button:not([disabled])',
+    )).filter((element) => element.getClientRects().length > 0);
     const first = focusable[0];
     const last = focusable[focusable.length - 1];
     if (event.shiftKey && document.activeElement === first) {
@@ -99,19 +95,7 @@ export default function SiteNavigation() {
             ))}
           </nav>
           <div className="site-header__actions">
-            <label className="language-switcher">
-              <span className="visually-hidden">{t("language")}</span>
-              <select
-                value={locale}
-                onChange={(event) => changeLocale(event.target.value)}
-              >
-                {routing.locales.map((availableLocale) => (
-                  <option value={availableLocale} key={availableLocale}>
-                    {availableLocale.toUpperCase()}
-                  </option>
-                ))}
-              </select>
-            </label>
+            <LanguageSwitcher />
             <button className="icon-button theme-toggle" type="button" onClick={toggleTheme} aria-label={lightTheme ? t("darkMode") : t("lightMode")} aria-pressed={lightTheme}>
               <svg className="theme-icon theme-icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true"><circle cx="12" cy="12" r="4" /><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5" /></svg>
               <svg className="theme-icon theme-icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true"><path d="M20.5 14A8.5 8.5 0 0 1 10 3.5 8.5 8.5 0 1 0 20.5 14Z" /></svg>
@@ -158,20 +142,7 @@ export default function SiteNavigation() {
             {t(section)}
           </a>
         ))}
-        <label className="language-switcher language-switcher--mobile">
-          <span>{t("language")}</span>
-          <select
-            value={locale}
-            tabIndex={menuOpen ? 0 : -1}
-            onChange={(event) => changeLocale(event.target.value)}
-          >
-            {routing.locales.map((availableLocale) => (
-              <option value={availableLocale} key={availableLocale}>
-                {availableLocale.toUpperCase()}
-              </option>
-            ))}
-          </select>
-        </label>
+        <LanguageSwitcher mobile enabled={menuOpen} />
         <a
           className="button button--primary"
           href={`${onHomePage ? "" : `/${locale}` }#contact`}

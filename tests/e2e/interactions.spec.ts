@@ -1,6 +1,21 @@
 import { expect, test } from "@playwright/test";
 
 const pageErrors = new WeakMap<object, string[]>();
+test("language picker supports dismissal and preserves the current page", async ({ page }) => {
+  await page.goto("/en/projects?view=all#main-content");
+  const picker = page.locator(".site-header .language-switcher");
+  const trigger = picker.getByRole("button");
+  await trigger.click();
+  await expect(picker.getByRole("link", { name: "FR Français" })).toBeVisible();
+  await page.keyboard.press("Escape");
+  await expect(trigger).toHaveAttribute("aria-expanded", "false");
+  await expect(trigger).toBeFocused();
+  await trigger.click();
+  await picker.getByRole("link", { name: "SW Kiswahili" }).click();
+  await expect(page).toHaveURL(/\/sw\/projects\?view=all#main-content$/);
+  await expect(page.locator(".site-header .language-trigger")).toContainText("SW");
+});
+
 test("service icons animate together and can be paused", async ({ page }) => {
   await page.goto("/en");
   const icons = page.locator(".service-tab__icon svg");
@@ -111,16 +126,13 @@ test("theme follows system changes and still toggles when storage is blocked", a
   await expect(page.locator("html")).toHaveAttribute("data-theme", "light");
 });
 
-test("hero animates about its center and can be paused", async ({ page }) => {
+test("hero animates without the removed pause button", async ({ page }) => {
   await page.goto("/en");
   const mark = page.locator(".hero-wordmark");
   await expect(mark).toHaveCSS("animation-name", "identity-turn");
   const firstTransform = await mark.evaluate((element) => getComputedStyle(element).transform);
   await expect.poll(() => mark.evaluate((element) => getComputedStyle(element).transform)).not.toBe(firstTransform);
-  await page.getByRole("button", { name: "Pause hero animation" }).click();
-  await expect(mark).toHaveCSS("animation-play-state", "paused");
-  await page.getByRole("button", { name: "Resume hero animation" }).click();
-  await expect(mark).toHaveCSS("animation-play-state", "running");
+  await expect(page.locator(".scene-control")).toHaveCount(0);
 });
 
 test("reduced motion disables automatic hero movement", async ({ page }) => {
@@ -128,7 +140,7 @@ test("reduced motion disables automatic hero movement", async ({ page }) => {
   await page.goto("/en");
   await expect(page.locator(".hero-wordmark")).toHaveCSS("animation-name", "none");
   await expect(page.locator(".hero-gem")).toHaveCSS("animation-name", "none");
-  await expect(page.locator(".scene-control")).toBeDisabled();
+  await expect(page.locator(".scene-control")).toHaveCount(0);
 });
 
 test("quick navigation is removed from case studies and homepage", async ({ page }) => {
