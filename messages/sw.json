@@ -59,7 +59,9 @@
         "title": "Data na Kujifunza kwa Mashine",
         "description": "Usafishaji wa data na mifano ya kujifunza kwa mashine kwa kutumia zana za data za Python."
       }
-    }
+    },
+    "pauseMotion": "Sitisha uhuishaji wa ikoni",
+    "resumeMotion": "Endeleza uhuishaji wa ikoni"
   },
   "process": {
     "title": "Mchakato",
@@ -80,7 +82,13 @@
         "title": "4. Msaada",
         "description": "Tunajadili mabadiliko baada ya uzinduzi au hatua zinazofuata."
       }
-    }
+    },
+    "carousel": "Msururu wa hatua",
+    "stepCount": "HATUA {current} / {total}",
+    "pause": "Sitisha mfululizo",
+    "resume": "Cheza mfululizo",
+    "previous": "Hatua iliyotangulia",
+    "next": "Hatua inayofuata"
   },
   "experience": {
     "title": "Uzoefu na Elimu",

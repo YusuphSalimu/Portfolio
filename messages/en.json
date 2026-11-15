@@ -58,7 +58,9 @@
         "title": "Data & Machine Learning",
         "description": "Data cleaning and machine learning models using Python data tools."
       }
-    }
+    },
+    "pauseMotion": "Pause icon animation",
+    "resumeMotion": "Resume icon animation"
   },
   "process": {
     "title": "Process",
@@ -79,7 +81,13 @@
         "title": "4. Support",
         "description": "We discuss any post-launch changes or next steps."
       }
-    }
+    },
+    "carousel": "Process sequence",
+    "stepCount": "STEP {current} / {total}",
+    "pause": "Pause sequence",
+    "resume": "Play sequence",
+    "previous": "Previous step",
+    "next": "Next step"
   },
   "experience": {
     "title": "Experience & Education",

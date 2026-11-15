@@ -1,6 +1,50 @@
 import { expect, test } from "@playwright/test";
 
 const pageErrors = new WeakMap<object, string[]>();
+test("service icons animate together and can be paused", async ({ page }) => {
+  await page.goto("/en");
+  const icons = page.locator(".service-tab__icon svg");
+  await expect(icons).toHaveCount(4);
+  for (const icon of await icons.all()) await expect(icon).toHaveCSS("animation-name", "service-turn");
+  for (const tab of await page.getByRole("tab").all()) {
+    await tab.click();
+    await expect(page.getByRole("tabpanel").locator(".service-icon-plinth")).toHaveCSS("animation-name", "service-turn");
+  }
+  await page.getByRole("button", { name: "Pause icon animation" }).click();
+  for (const icon of await icons.all()) await expect(icon).toHaveCSS("animation-play-state", "paused");
+});
+
+test("process plays in view, wraps manually and stops offscreen", async ({ page }) => {
+  await page.goto("/en");
+  const journey = page.locator(".process-journey");
+  await journey.scrollIntoViewIfNeeded();
+  await page.mouse.move(0, 0);
+  await expect(journey).toHaveAttribute("data-playing", "true");
+  await expect(journey).toHaveAttribute("data-step", "build", { timeout: 8000 });
+  await journey.getByRole("button", { name: "4. Support", exact: true }).click();
+  await expect(journey).toHaveAttribute("data-playing", "false");
+  await journey.getByRole("button", { name: "Next step" }).click();
+  await expect(journey).toHaveAttribute("data-step", "discover");
+  await journey.getByRole("button", { name: "Previous step" }).click();
+  await expect(journey).toHaveAttribute("data-step", "support");
+  await journey.getByRole("button", { name: "Play sequence" }).click();
+  await expect(journey).toHaveAttribute("data-playing", "true");
+  await page.evaluate(() => window.scrollTo({ top: 0, behavior: "instant" }));
+  await expect(journey).toHaveAttribute("data-playing", "false");
+});
+
+test("reduced motion keeps the process manual and icons still", async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  await page.goto("/en");
+  const journey = page.locator(".process-journey");
+  await journey.scrollIntoViewIfNeeded();
+  await expect(journey).toHaveAttribute("data-playing", "false");
+  await expect(journey.locator(".motion-control")).toBeDisabled();
+  await expect(page.locator(".services-explorer")).toHaveAttribute("data-paused", "true");
+  await journey.getByRole("button", { name: "Next step" }).click();
+  await expect(journey.getByRole("heading", { name: "Build", exact: true })).toBeVisible();
+});
+
 test.beforeEach(async ({ page }) => {
   const errors: string[] = [];
   pageErrors.set(page, errors);

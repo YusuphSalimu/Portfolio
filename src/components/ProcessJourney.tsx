@@ -29,7 +29,7 @@ export default function ProcessJourney() {
   const title = (key: typeof current.key) => t(`steps.${key}.title`).replace(/^\d+\.\s*/, "");
 
   useEffect(() => {
-    const observer = new IntersectionObserver(([entry]) => setVisible(entry.isIntersecting), { threshold: .25 });
+    const observer = new IntersectionObserver(([entry]) => setVisible(entry.isIntersecting && entry.intersectionRatio >= .25), { threshold: .25 });
     if (container.current) observer.observe(container.current);
     const syncVisibility = () => setPageVisible(document.visibilityState === "visible");
     syncVisibility();

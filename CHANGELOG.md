@@ -1,5 +1,13 @@
 # Changelog
 
+## Service motion and process journey (2026-11-15)
+
+- Added gentle, staggered 3D rotation to all four service icons and the selected service tile, with a shared pause control.
+- Replaced the static process columns with a circular, looping sequence that starts in view. Added direct step selection, previous/next controls, mobile swiping, and playback controls.
+- Pause playback offscreen, in hidden browser tabs, and while hovering over the description; respect reduced-motion preferences. Localized controls in English, Swahili, and French.
+- Added browser coverage for service motion, process playback and wrapping, and reduced-motion navigation.
+- Validation: lint, production build/type checks, 16 unit tests, and all 38 browser tests passed. Visually reviewed the circular process on desktop/dark and mobile/light layouts and the rotating service icons.
+
 ## Contact and icon cleanup (2026-11-15)
 
 - Removed the quick-navigation trigger, dialog, and shortcut from all localized pages; removed northeast-arrow decorations throughout the site.

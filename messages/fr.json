@@ -59,7 +59,9 @@
         "title": "Data & Machine Learning",
         "description": "Nettoyage des données et modèles de machine learning avec les outils de données Python."
       }
-    }
+    },
+    "pauseMotion": "Mettre les icônes en pause",
+    "resumeMotion": "Animer les icônes"
   },
   "process": {
     "title": "Processus",
@@ -80,7 +82,13 @@
         "title": "4. Support",
         "description": "Nous discutons des changements après le lancement ou des prochaines étapes."
       }
-    }
+    },
+    "carousel": "Séquence du processus",
+    "stepCount": "ÉTAPE {current} / {total}",
+    "pause": "Mettre en pause",
+    "resume": "Lire la séquence",
+    "previous": "Étape précédente",
+    "next": "Étape suivante"
   },
   "experience": {
     "title": "Expérience & Éducation",
