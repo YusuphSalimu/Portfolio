@@ -10,8 +10,8 @@
     "skipToContent": "Aller au contenu principal",
     "themeToggle": "Basculer entre les thèmes clair et sombre",
     "language": "Langue",
-    "lightMode": "Passer au th?me clair",
-    "darkMode": "Passer au th?me sombre"
+    "lightMode": "Passer au thème clair",
+    "darkMode": "Passer au thème sombre"
   },
   "hero": {
     "availability": "Disponible pour du travail freelance et à distance",
@@ -26,8 +26,8 @@
       "status": "ouvert aux opportunités freelance et à distance",
       "stack": "TypeScript · Next.js · Django"
     },
-    "pauseMotion": "Mettre l?animation en pause",
-    "resumeMotion": "Reprendre l?animation"
+    "pauseMotion": "Mettre l’animation en pause",
+    "resumeMotion": "Reprendre l’animation"
   },
   "impact": {
     "clientWebsites": "3 sites clients en ligne",
@@ -180,15 +180,15 @@
       "competition": "Compétition",
       "mobile": "Mobile"
     },
-    "resultCount": "{count} projets affich?s",
-    "caseStudy": "?tude de cas",
+    "resultCount": "{count} projets affichés",
+    "caseStudy": "Étude de cas",
     "visitSite": "Voir le site",
     "clientProject": "Projet client",
     "ownProject": "Projet personnel",
     "status": {
       "live": "En ligne",
-      "case-study": "?tude de cas",
-      "competition": "Comp?tition"
+      "case-study": "Étude de cas",
+      "competition": "Compétition"
     }
   },
   "palette": {

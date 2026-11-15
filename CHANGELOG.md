@@ -1,5 +1,16 @@
 # Changelog
 
+## Portfolio refresh — Motion, themes, and compact work grid (2026-11-15)
+
+- Studied https://eleo.netlify.app/ in Chromium and adapted its floating hero identity, interactive service selection, and project presentation into an original design.
+- Added a gently rotating `<Yusuph.dev/>` hero with pointer tilt, pause/resume, and reduced-motion support.
+- Replaced the split color systems with a shared navy, mint, and warm-white palette. Themes initialize before paint, follow system preference until overridden, persist across visits, and remain usable when storage is blocked.
+- Show all seven published projects on the homepage with category filters, compact cards, browser-framed screenshot previews, and localized actions. The unpublished competition draft remains private.
+- Reduced portrait size and section spacing; added sticky navigation, reading progress, service tabs with keyboard support, and a back-to-top link.
+- Created a matching vector Y identity, multi-resolution favicon, 96px search icon, and Apple touch icon. Refreshed Open Graph colors and social preview.
+- Fixed command-palette section navigation from project pages and added missing accessible section-heading IDs.
+- Added browser coverage for themes, blocked storage, contrast, hero motion, service navigation, project filtering, and favicon routes.
+
 ## Phase 4 — Completion audit (2026-11-14)
 
 - Confirmed the homepage order: Zantan Company, Zantan Mining, Ayaven Kids, then Hardware Stores.
