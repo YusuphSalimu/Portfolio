@@ -27,7 +27,7 @@ export default async function OpenGraphImage() {
           fontFamily: "Space Grotesk, sans-serif",
         }}
       >
-        <div style={{ color: "#7ce4c8", fontSize: 28, letterSpacing: 2, marginBottom: 26 }}>&lt;Yusuph.dev/&gt;</div>
+        <div style={{ color: "#7ce4c8", fontSize: 28, letterSpacing: 2, marginBottom: 26 }}>&lt;yusuph.dev/&gt;</div>
         <div style={{ fontSize: 76, fontWeight: 700, letterSpacing: -1.52, lineHeight: 1.05 }}>Yusuph Salimu</div>
         <div style={{ color: "#a5bac2", fontSize: 34, marginTop: 22 }}>Software Engineer | Full-Stack Developer</div>
         <div style={{ display: "flex", width: 190, height: 8, marginTop: 48, borderRadius: 8, background: "linear-gradient(90deg,#7ce4c8,#398875)" }} />

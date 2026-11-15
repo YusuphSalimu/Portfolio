@@ -22,11 +22,11 @@ export default function HeroIdentity() {
       }}
       onPointerLeave={() => { x.set(0); y.set(0); }}
     >
-      <span className="hero-scene__label">01 / YUSUPH.DEV</span>
+      <span className="hero-scene__label">01 / yusuph.dev</span>
       <div className="hero-scene__orbit" aria-hidden="true" />
       <motion.div className="hero-scene__object" style={{ rotateX: reducedMotion ? 0 : rotateX, rotateY: reducedMotion ? 0 : rotateY }}>
-        <div className="hero-wordmark" aria-label="Yusuph.dev">
-          <span aria-hidden="true">&lt;</span>Yusuph<span className="hero-wordmark__dot">.dev</span><span aria-hidden="true">/&gt;</span>
+        <div className="hero-wordmark" aria-label="yusuph.dev">
+          <span aria-hidden="true">&lt;</span>yusuph<span className="hero-wordmark__dot">.dev</span><span aria-hidden="true">/&gt;</span>
         </div>
         <div className="hero-gem" aria-hidden="true"><i /><i /><i /><i /><i /><i /></div>
       </motion.div>

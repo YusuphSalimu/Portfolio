@@ -1,5 +1,10 @@
 # Changelog
 
+## Lowercase wordmark (2026-11-15)
+
+- Standardized the animated hero, its label and accessible name, and social preview to lowercase `yusuph.dev`, matching the header and footer.
+- Validation: targeted ESLint and whitespace checks passed; audited all source wordmark occurrences.
+
 ## Styled form dropdowns (2026-11-15)
 
 - Audited remaining dropdowns and replaced the Project Type native popup with a reusable themed form selector matching the language picker.
