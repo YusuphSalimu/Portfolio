@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { motion, useReducedMotion } from "motion/react";
+import { motion } from "motion/react";
+import { useReducedMotionPreference } from "@/hooks/useReducedMotionPreference";
 import { Link } from "@/i18n/routing";
 import type { ProjectEntry } from "@/lib/projects";
 import StatusBadge from "./StatusBadge";
@@ -16,7 +17,7 @@ export default function ProjectCard({
   priority?: boolean;
   delay?: number;
 }) {
-  const reducedMotion = useReducedMotion();
+  const reducedMotion = useReducedMotionPreference();
   const t = useTranslations("projects");
   const preview = project.screenshots?.[0] ?? project.heroImage;
   const visibleStack = project.stack.slice(0, 3);

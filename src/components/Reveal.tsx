@@ -1,6 +1,7 @@
 "use client";
 
-import { motion, useReducedMotion } from "motion/react";
+import { motion } from "motion/react";
+import { useReducedMotionPreference } from "@/hooks/useReducedMotionPreference";
 import type { ReactNode } from "react";
 
 export default function Reveal({
@@ -12,7 +13,7 @@ export default function Reveal({
   className?: string;
   delay?: number;
 }) {
-  const reducedMotion = useReducedMotion();
+  const reducedMotion = useReducedMotionPreference();
   return (
     <motion.div
       className={className}

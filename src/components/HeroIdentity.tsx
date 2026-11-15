@@ -1,12 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { motion, useMotionValue, useReducedMotion, useSpring } from "motion/react";
+import { motion, useMotionValue, useSpring } from "motion/react";
+import { useReducedMotionPreference } from "@/hooks/useReducedMotionPreference";
 import { useTranslations } from "next-intl";
 
 export default function HeroIdentity() {
   const t = useTranslations("hero");
-  const reducedMotion = useReducedMotion();
+  const reducedMotion = useReducedMotionPreference();
   const [paused, setPaused] = useState(false);
   const x = useMotionValue(0);
   const y = useMotionValue(0);
