@@ -253,6 +253,18 @@ html[data-theme="dark"] .theme-icon--moon { opacity: 0; transform: rotate(40deg)
 .contact-form label { display: grid; gap: 7px; font-size: .8rem; font-weight: 500; }
 .contact-form input, .contact-form select, .contact-form textarea { width: 100%; min-height: 46px; border: 1px solid var(--card-border); border-radius: 9px; padding: 10px 12px; background: var(--page-surface); color: var(--page-text); font-size: 16px; }
 .contact-form textarea { resize: vertical; }
+.form-select { position: relative; display: grid; gap: 7px; align-content: start; min-width: 0; }
+.contact-form .form-select__native { position: absolute; width: 1px; height: 1px; min-height: 0; padding: 0; border: 0; opacity: 0; pointer-events: none; }
+.form-select__trigger { display: flex; align-items: center; justify-content: space-between; gap: 12px; width: 100%; min-height: 46px; padding: 10px 12px; border: 1px solid var(--card-border); border-radius: 10px; background: var(--page-surface); color: var(--page-text); text-align: left; font-size: 16px; }
+.form-select__trigger svg { width: 16px; height: 16px; flex-shrink: 0; color: var(--accent); transition: transform .2s; }
+.form-select__trigger[aria-expanded="true"] { border-color: var(--accent); background: var(--accent-soft); }
+.form-select__trigger[aria-expanded="true"] svg { transform: rotate(180deg); }
+.form-select__options { position: absolute; z-index: 20; top: calc(100% + 8px); left: 0; right: 0; max-height: 260px; overflow-y: auto; overscroll-behavior: contain; margin: 0; padding: 6px; list-style: none; border: 1px solid var(--card-border); border-radius: 14px; background: var(--card-surface); box-shadow: 0 12px 36px #0003; }
+.form-select__options li { display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 44px; padding: 10px 12px; border-radius: 9px; color: var(--page-text); font-size: .85rem; cursor: pointer; }
+.form-select__options li[data-active="true"] { background: var(--soft-surface); outline: 1px solid var(--accent); outline-offset: -1px; }
+.form-select__options li[aria-selected="true"] { background: var(--accent-soft); color: var(--accent); }
+.form-select__options svg { width: 16px; height: 16px; flex-shrink: 0; }
+.form-select__error { color: var(--error); font-size: .75rem; margin: 0; }
 .contact-form button:disabled { opacity: .65; cursor: wait; }
 .form-status { margin: 0; font-size: .85rem; line-height: 1.65; }
 .form-status--success { color: var(--success); }

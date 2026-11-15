@@ -1,6 +1,37 @@
 import { expect, test } from "@playwright/test";
 
 const pageErrors = new WeakMap<object, string[]>();
+test("styled project dropdown validates, navigates and submits the selected value", async ({ page }) => {
+  let submitted: Record<string, string> | undefined;
+  await page.route("**/api/contact", async (route) => {
+    submitted = route.request().postDataJSON();
+    await route.fulfill({ json: { message: "Message received" } });
+  });
+  await page.goto("/en");
+  const form = page.locator(".contact-form");
+  await form.locator('[name="name"]').fill("Dropdown test");
+  await form.locator('[name="email"]').fill("test@example.com");
+  await form.locator('[name="message"]').fill("Testing the styled project dropdown without sending email.");
+  const dropdown = form.getByRole("combobox", { name: "Project Type" });
+  await form.locator('[type="submit"]').click();
+  await expect(dropdown).toHaveAttribute("aria-invalid", "true");
+  expect(submitted).toBeUndefined();
+  await dropdown.press("ArrowDown");
+  await dropdown.press("End");
+  await dropdown.press("Enter");
+  await expect(dropdown).toContainText("Other");
+  await dropdown.click();
+  await dropdown.press("Escape");
+  await expect(dropdown).toHaveAttribute("aria-expanded", "false");
+  await dropdown.click();
+  await form.getByRole("option", { name: "Website", exact: true }).click();
+  await expect(dropdown).toContainText("Website");
+  await form.locator('[type="submit"]').click();
+  await expect(form.getByRole("status")).toContainText("Message received");
+  expect(submitted?.projectType).toBe("website");
+  await expect(dropdown).toContainText("Choose a project type");
+});
+
 test("language picker supports dismissal and preserves the current page", async ({ page }) => {
   await page.goto("/en/projects?view=all#main-content");
   const picker = page.locator(".site-header .language-switcher");

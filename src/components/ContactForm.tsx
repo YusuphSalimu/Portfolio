@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { useState, type FormEvent } from "react";
+import FormSelect from "./FormSelect";
 
 type FormStatus = { type: "success" | "error"; message: string } | null;
 
@@ -9,6 +10,7 @@ export default function ContactForm() {
   const t = useTranslations("contact.form");
   const [status, setStatus] = useState<FormStatus>(null);
   const [submitting, setSubmitting] = useState(false);
+  const [projectType, setProjectType] = useState("");
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -28,7 +30,7 @@ export default function ContactForm() {
         type: response.ok ? "success" : "error",
         message: result.message ?? t("error"),
       });
-      if (response.ok) form.reset();
+      if (response.ok) { form.reset(); setProjectType(""); }
     } catch {
       setStatus({ type: "error", message: t("error") });
     } finally {
@@ -47,15 +49,9 @@ export default function ContactForm() {
           {t("email")}
           <input name="email" type="email" autoComplete="email" required maxLength={254} />
         </label>
-        <label>
-          {t("projectType")}
-          <select name="projectType" required defaultValue="">
-            <option value="" disabled>{t("chooseType")}</option>
-            {(["website", "platform", "backend", "data", "other"] as const).map((value) => (
-              <option value={value} key={value}>{t(`types.${value}`)}</option>
-            ))}
-          </select>
-        </label>
+        <FormSelect name="projectType" label={t("projectType")} placeholder={t("chooseType")} required
+          value={projectType} onChange={setProjectType}
+          options={(["website", "platform", "backend", "data", "other"] as const).map((value) => ({ value, label: t(`types.${value}`) }))} />
         <label>
           {t("budget")}
           <input name="budget" maxLength={120} />

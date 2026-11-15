@@ -1,5 +1,11 @@
 # Changelog
 
+## Styled form dropdowns (2026-11-15)
+
+- Audited remaining dropdowns and replaced the Project Type native popup with a reusable themed form selector matching the language picker.
+- Added selected-item checkmarks, keyboard navigation and type-ahead, Escape/outside dismissal, and light/dark styling.
+- Preserve required-field validation, submission values, and successful form reset; added a browser check using mocked contact delivery.
+
 ## Compact navigation and footer (2026-11-15)
 
 - Reduced header height and footer padding, including the unused bottom space on mobile.
