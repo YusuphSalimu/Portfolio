@@ -19,6 +19,7 @@ export default async function SiteFooter() {
           </a>
         </nav>
         <small>© 2026 Yusuph Salimu. {t("rights")}</small>
+        <a className="back-to-top" href="#main-content">{t("backToTop")} <span aria-hidden="true">↑</span></a>
       </div>
     </footer>
   );

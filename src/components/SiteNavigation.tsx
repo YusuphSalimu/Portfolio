@@ -5,6 +5,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { useEffect, useRef, useState, type KeyboardEvent as ReactKeyboardEvent } from "react";
 import { routing } from "@/i18n/routing";
 import Logo from "@/components/brand/Logo";
+import ScrollProgress from "./ScrollProgress";
 
 const sectionLinks = ["about", "skills", "projects", "experience", "contact"] as const;
 
@@ -20,10 +21,18 @@ export default function SiteNavigation() {
   const wasMenuOpen = useRef(false);
 
   useEffect(() => {
-    const storedTheme = window.localStorage.getItem("portfolio-theme");
-    const useLightTheme = storedTheme === "light";
-    setLightTheme(useLightTheme);
-    document.documentElement.dataset.theme = useLightTheme ? "light" : "dark";
+    const preference = window.matchMedia("(prefers-color-scheme: dark)");
+    function syncTheme() {
+      let storedTheme: string | null = null;
+      try { storedTheme = window.localStorage.getItem("portfolio-theme"); } catch { /* Storage can be unavailable in private browsing. */ }
+      const theme = storedTheme === "light" || storedTheme === "dark" ? storedTheme : preference.matches ? "dark" : "light";
+      document.documentElement.dataset.theme = theme;
+      setLightTheme(theme === "light");
+    }
+    syncTheme();
+    preference.addEventListener("change", syncTheme);
+    window.addEventListener("storage", syncTheme);
+    return () => { preference.removeEventListener("change", syncTheme); window.removeEventListener("storage", syncTheme); };
   }, []);
 
   useEffect(() => {
@@ -51,7 +60,7 @@ export default function SiteNavigation() {
   }, [menuOpen]);
 
   function changeLocale(nextLocale: string) {
-    window.location.assign(`/${nextLocale}${pathname.replace(/^\/(en|sw|fr)/, "") || ""}`);
+    window.location.assign(`/${nextLocale}${pathname.replace(/^\/(en|sw|fr)/, "") || ""}${window.location.search}${window.location.hash}`);
   }
 
   function handleMenuKeyDown(event: ReactKeyboardEvent<HTMLElement>) {
@@ -74,13 +83,14 @@ export default function SiteNavigation() {
     const nextIsLight = !lightTheme;
     setLightTheme(nextIsLight);
     document.documentElement.dataset.theme = nextIsLight ? "light" : "dark";
-    window.localStorage.setItem("portfolio-theme", nextIsLight ? "light" : "dark");
+    try { window.localStorage.setItem("portfolio-theme", nextIsLight ? "light" : "dark"); } catch { /* The theme still works for this visit. */ }
   }
 
   return (
     <>
       <a className="skip-link" href="#main-content">{t("skipToContent")}</a>
       <header className="site-header">
+        <ScrollProgress />
         <div className="site-header__inner">
           <Logo href={`/${locale}`} />
           <nav className="desktop-nav" aria-label="Main navigation">
@@ -102,8 +112,9 @@ export default function SiteNavigation() {
                 ))}
               </select>
             </label>
-            <button className="icon-button theme-toggle" type="button" onClick={toggleTheme} aria-label={t("themeToggle")} aria-pressed={lightTheme}>
-              {lightTheme ? "☾" : "☼"}
+            <button className="icon-button theme-toggle" type="button" onClick={toggleTheme} aria-label={lightTheme ? t("darkMode") : t("lightMode")} aria-pressed={lightTheme}>
+              <svg className="theme-icon theme-icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true"><circle cx="12" cy="12" r="4" /><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5" /></svg>
+              <svg className="theme-icon theme-icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true"><path d="M20.5 14A8.5 8.5 0 0 1 10 3.5 8.5 8.5 0 1 0 20.5 14Z" /></svg>
             </button>
             <a className="button button--primary header-connect" href={`${onHomePage ? "" : `/${locale}` }#contact`}>{t("letsConnect")}</a>
             <button

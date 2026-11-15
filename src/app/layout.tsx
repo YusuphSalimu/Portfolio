@@ -17,6 +17,10 @@ const jetBrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  icons: {
+    icon: [{ url: "/favicon-96.png", type: "image/png", sizes: "96x96" }],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
+  },
   metadataBase: new URL("https://yusuph-portfolio.vercel.app"),
   title: {
     default: "Yusuph Salimu — Software Engineer | Full-Stack Developer",
@@ -46,6 +50,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: `(function(){var t;try{t=localStorage.getItem('portfolio-theme')}catch(e){}document.documentElement.dataset.theme=t==='light'||t==='dark'?t:matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'})()` }} />
+      </head>
       <body className={`${spaceGrotesk.variable} ${jetBrainsMono.variable} antialiased`}>
         {children}
         <Analytics />
