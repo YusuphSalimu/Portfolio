@@ -9,6 +9,7 @@ import Testimonials from "@/components/Testimonials";
 import HeroIdentity from "@/components/HeroIdentity";
 import ServicesExplorer from "@/components/ServicesExplorer";
 import ContactIcon from "@/components/ContactIcon";
+import ProcessJourney from "@/components/ProcessJourney";
 
 const skillGroups = {
   frontend: ["TypeScript", "JavaScript", "HTML5", "CSS3", "Next.js", "React", "Angular"],
@@ -19,7 +20,6 @@ const skillGroups = {
   web: ["Headless WordPress", "WooCommerce integrations", "SEO-conscious websites"],
 } as const;
 
-const processSteps = ["discover", "build", "launch", "support"] as const;
 
 export async function generateMetadata({
   params,
@@ -123,15 +123,7 @@ export default async function HomePage() {
         <section className="content-section page-shell" aria-labelledby="process-title">
           <Reveal>
             <SectionHeading id="process-title" eyebrow={`03 / ${t("process.title")}`} title={t("process.title")} />
-            <div className="process-grid">
-              {processSteps.map((step, index) => (
-                <article className="process-step" key={step}>
-                  <span className="process-step__number">0{index + 1}</span>
-                  <h3>{t(`process.steps.${step}.title`).replace(/^\d+\.\s*/, "")}</h3>
-                  <p>{t(`process.steps.${step}.description`)}</p>
-                </article>
-              ))}
-            </div>
+            <ProcessJourney />
           </Reveal>
         </section>
 

@@ -2,7 +2,8 @@
 
 import { useRef, useState } from "react";
 import { useTranslations } from "next-intl";
-import { PanelsTopLeft, ShieldCheck, ServerCog, BrainCircuit } from "lucide-react";
+import { PanelsTopLeft, ShieldCheck, ServerCog, BrainCircuit, Pause, Play } from "lucide-react";
+import { useReducedMotionPreference } from "@/hooks/useReducedMotionPreference";
 
 const services = [
   { key: "websites", icon: PanelsTopLeft },
@@ -14,10 +15,12 @@ const services = [
 export default function ServicesExplorer() {
   const t = useTranslations("services");
   const [selected, setSelected] = useState(0);
+  const [paused, setPaused] = useState(false);
+  const reducedMotion = useReducedMotionPreference();
   const tabs = useRef<(HTMLButtonElement | null)[]>([]);
 
   return (
-    <div className="services-explorer">
+    <div className="services-explorer" data-paused={paused || reducedMotion}>
       <div className="service-tabs" role="tablist" aria-label={t("title")} aria-orientation="vertical">
         {services.map((service, index) => (
           <button key={service.key} ref={(element) => { tabs.current[index] = element; }}
@@ -46,6 +49,11 @@ export default function ServicesExplorer() {
           <p>{t(`items.${service.key}.description`)}</p>
         </div>
       ))}
+      <button className="motion-control service-motion-control" type="button" disabled={reducedMotion}
+        aria-pressed={paused || reducedMotion} onClick={() => setPaused(!paused)}>
+        {paused || reducedMotion ? <Play aria-hidden="true" /> : <Pause aria-hidden="true" />}
+        {paused ? t("resumeMotion") : t("pauseMotion")}
+      </button>
     </div>
   );
 }
