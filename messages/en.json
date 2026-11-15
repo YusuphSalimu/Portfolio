@@ -8,7 +8,9 @@
     "letsConnect": "Let's Connect",
     "skipToContent": "Skip to main content",
     "themeToggle": "Toggle light and dark theme",
-    "language": "Language"
+    "language": "Language",
+    "lightMode": "Switch to light mode",
+    "darkMode": "Switch to dark mode"
   },
   "hero": {
     "availability": "Available for freelance & remote work",
@@ -22,7 +24,9 @@
       "location": "Dodoma, Tanzania",
       "status": "open to freelance & remote work",
       "stack": "TypeScript · Next.js · Django"
-    }
+    },
+    "pauseMotion": "Pause hero animation",
+    "resumeMotion": "Resume hero animation"
   },
   "impact": {
     "clientWebsites": "3 live client websites",
@@ -117,9 +121,18 @@
       "AI Brainstorming Ideas (Coursera, 2026)"
     ],
     "languages": [
-      { "name": "Kiswahili", "level": "Bilingual" },
-      { "name": "English", "level": "Professional working" },
-      { "name": "Arabic", "level": "Conversational" }
+      {
+        "name": "Kiswahili",
+        "level": "Bilingual"
+      },
+      {
+        "name": "English",
+        "level": "Professional working"
+      },
+      {
+        "name": "Arabic",
+        "level": "Conversational"
+      }
     ]
   },
   "contact": {
@@ -147,7 +160,8 @@
   },
   "footer": {
     "shortLine": "Software engineer building web platforms, business websites, and backend systems.",
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "backToTop": "Back to top"
   },
   "common": {
     "englishOnlyNote": "This case study is currently available only in English."
@@ -164,6 +178,16 @@
       "saas": "SaaS",
       "competition": "Competition",
       "mobile": "Mobile"
+    },
+    "resultCount": "{count} projects shown",
+    "caseStudy": "Case study",
+    "visitSite": "Visit site",
+    "clientProject": "Client project",
+    "ownProject": "Own project",
+    "status": {
+      "live": "Live",
+      "case-study": "Case study",
+      "competition": "Competition"
     }
   },
   "palette": {

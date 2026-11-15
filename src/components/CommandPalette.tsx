@@ -2,11 +2,12 @@
 
 import { useTranslations } from "next-intl";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { Link } from "@/i18n/routing";
+import { Link, usePathname } from "@/i18n/routing";
 import type { ProjectEntry } from "@/lib/projects";
 
 export default function CommandPalette({ projects }: { projects: ProjectEntry[] }) {
   const t = useTranslations("palette");
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
   const dialogRef = useRef<HTMLDialogElement>(null);
@@ -63,7 +64,7 @@ export default function CommandPalette({ projects }: { projects: ProjectEntry[] 
 
   return (
     <>
-      <button className="palette-trigger" type="button" onClick={() => setOpen(true)}>
+      <button className="palette-trigger" type="button" onClick={(event) => { returnFocus.current = event.currentTarget; setOpen(true); }}>
         <span aria-hidden="true">⌘K</span><span>{t("trigger")}</span>
       </button>
       <dialog
@@ -89,10 +90,10 @@ export default function CommandPalette({ projects }: { projects: ProjectEntry[] 
         <ul>
           {results.map((result) => (
             <li key={result.key}>
-              {result.href.startsWith("#") ? (
+              {result.href.startsWith("#") && pathname === "/" ? (
                 <a href={result.href} onClick={() => setOpen(false)}>{result.label}</a>
               ) : (
-                <Link href={result.href} onClick={() => setOpen(false)}>{result.label}</Link>
+                <Link href={result.href.startsWith("#") ? `/${result.href}` : result.href} onClick={() => setOpen(false)}>{result.label}</Link>
               )}
             </li>
           ))}

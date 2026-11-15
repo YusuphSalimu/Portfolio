@@ -5,14 +5,7 @@ import { motion, useReducedMotion } from "motion/react";
 import { Link } from "@/i18n/routing";
 import type { ProjectEntry } from "@/lib/projects";
 import StatusBadge from "./StatusBadge";
-
-const categoryLabels = {
-  web: "Web",
-  "data-ml": "Data & ML",
-  saas: "SaaS",
-  competition: "Competition",
-  mobile: "Mobile",
-} as const;
+import { useTranslations } from "next-intl";
 
 export default function ProjectCard({
   project,
@@ -24,6 +17,8 @@ export default function ProjectCard({
   delay?: number;
 }) {
   const reducedMotion = useReducedMotion();
+  const t = useTranslations("projects");
+  const preview = project.screenshots?.[0] ?? project.heroImage;
   const visibleStack = project.stack.slice(0, 3);
   const hiddenStackCount = project.stack.length - visibleStack.length;
 
@@ -37,28 +32,29 @@ export default function ProjectCard({
       transition={{ duration: 0.35, delay: reducedMotion ? 0 : delay }}
     >
       <article className="project-card glass-surface">
-        <div className="project-card__image">
+        <Link className="project-card__preview" href={`/projects/${project.slug}`} aria-label={`${t("caseStudy")}: ${project.title}`} tabIndex={-1}>
+          <div className="preview-chrome" aria-hidden="true"><span><i /><i /><i /></span><span>{project.liveUrl ? new URL(project.liveUrl).hostname : project.slug}</span><span>↗</span></div>
+          <div className="project-card__image">
           <Image
-            src={project.heroImage.src}
-            alt={project.heroImage.alt}
+            src={preview.src}
+            alt={preview.alt}
             width={1600}
             height={900}
             sizes="(min-width: 1024px) 360px, (min-width: 640px) 50vw, 100vw"
             priority={priority}
           />
-          <div className="project-card__image-overlay" />
-          <div className="project-card__badges">
+          </div>
+        </Link>
+        <div className="project-card__content">
+          <div className="project-card__meta">
+            <span className="project-card__eyebrow">{t(`categories.${project.category}`)}</span>
             <StatusBadge status={project.status} />
             {!project.published && <span className="draft-badge">Draft</span>}
           </div>
-          {project.client && <span className="project-card__client">{project.client.name}</span>}
-        </div>
-        <div className="project-card__content">
-          <div className="project-card__eyebrow">{categoryLabels[project.category]}</div>
           <h2><Link href={`/projects/${project.slug}`}>{project.title}</Link></h2>
-          <p className="project-card__ownership">{project.client ? "Client project" : "Own project"}</p>
+          <p className="project-card__ownership">{project.client ? `${t("clientProject")} · ${project.client.name}` : t("ownProject")}</p>
           <p className="project-card__summary">{project.summary}</p>
-          <p className="project-card__role">{project.role}</p>
+          <p className="project-card__role" title={project.role}>{project.role}</p>
           <ul className="stack-chips" aria-label="Technology stack">
             {visibleStack.map((item) => (
               <li key={item}>{item}</li>
@@ -67,11 +63,11 @@ export default function ProjectCard({
           </ul>
           <div className="project-card__actions">
             <Link href={`/projects/${project.slug}`} className="button button--primary">
-              View case study <span aria-hidden="true">→</span>
+              {t("caseStudy")} <span aria-hidden="true">→</span>
             </Link>
             {project.liveUrl && (
               <a className="button" href={project.liveUrl} target="_blank" rel="noreferrer">
-                Visit site <span aria-hidden="true">↗</span>
+                {t("visitSite")} <span aria-hidden="true">↗</span>
               </a>
             )}
           </div>

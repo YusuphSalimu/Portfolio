@@ -9,7 +9,9 @@
     "letsConnect": "Wasiliana Nami",
     "skipToContent": "Ruka hadi kwenye yaliyomo",
     "themeToggle": "Badili mandhari ya mwanga na giza",
-    "language": "Lugha"
+    "language": "Lugha",
+    "lightMode": "Washa mandhari ya mwanga",
+    "darkMode": "Washa mandhari ya giza"
   },
   "hero": {
     "availability": "Niko wazi kwa kazi za kujitegemea na za mbali",
@@ -23,7 +25,9 @@
       "location": "Dodoma, Tanzania",
       "status": "wazi kwa kazi za kujitegemea na za mbali",
       "stack": "TypeScript · Next.js · Django"
-    }
+    },
+    "pauseMotion": "Sitisha mwendo",
+    "resumeMotion": "Endeleza mwendo"
   },
   "impact": {
     "clientWebsites": "Tovuti 3 za wateja ziko hewani",
@@ -60,10 +64,22 @@
   "process": {
     "title": "Mchakato",
     "steps": {
-      "discover": { "title": "1. Gundua", "description": "Tunajadili mahitaji na kupanga kazi kulingana na malengo ya mradi." },
-      "build": { "title": "2. Jenga", "description": "Ninatekeleza suluhisho lililokubaliwa na kujaribu njia zake muhimu." },
-      "launch": { "title": "3. Zindua", "description": "Ninazindua mradi na kusaidia usanidi wa hosting, kikoa, DNS, na SSL." },
-      "support": { "title": "4. Msaada", "description": "Tunajadili mabadiliko baada ya uzinduzi au hatua zinazofuata." }
+      "discover": {
+        "title": "1. Gundua",
+        "description": "Tunajadili mahitaji na kupanga kazi kulingana na malengo ya mradi."
+      },
+      "build": {
+        "title": "2. Jenga",
+        "description": "Ninatekeleza suluhisho lililokubaliwa na kujaribu njia zake muhimu."
+      },
+      "launch": {
+        "title": "3. Zindua",
+        "description": "Ninazindua mradi na kusaidia usanidi wa hosting, kikoa, DNS, na SSL."
+      },
+      "support": {
+        "title": "4. Msaada",
+        "description": "Tunajadili mabadiliko baada ya uzinduzi au hatua zinazofuata."
+      }
     }
   },
   "experience": {
@@ -106,9 +122,18 @@
       "AI Brainstorming Ideas (Coursera, 2026)"
     ],
     "languages": [
-      { "name": "Kiswahili", "level": "Lugha mama" },
-      { "name": "Kiingereza", "level": "Kazi za kitaalamu" },
-      { "name": "Kiarabu", "level": "Mazungumzo" }
+      {
+        "name": "Kiswahili",
+        "level": "Lugha mama"
+      },
+      {
+        "name": "Kiingereza",
+        "level": "Kazi za kitaalamu"
+      },
+      {
+        "name": "Kiarabu",
+        "level": "Mazungumzo"
+      }
     ]
   },
   "contact": {
@@ -136,7 +161,8 @@
   },
   "footer": {
     "shortLine": "Mhandisi wa programu anayejenga mifumo ya wavuti, tovuti za biashara, na mifumo ya nyuma.",
-    "rights": "Haki zote zimehifadhiwa."
+    "rights": "Haki zote zimehifadhiwa.",
+    "backToTop": "Rudi juu"
   },
   "common": {
     "englishOnlyNote": "Uchambuzi wa mradi huu kwa sasa unapatikana kwa Kiingereza tu."
@@ -153,6 +179,16 @@
       "saas": "SaaS",
       "competition": "Mashindano",
       "mobile": "Simu"
+    },
+    "resultCount": "Miradi {count} inaonyeshwa",
+    "caseStudy": "Maelezo ya mradi",
+    "visitSite": "Tembelea tovuti",
+    "clientProject": "Mradi wa mteja",
+    "ownProject": "Mradi binafsi",
+    "status": {
+      "live": "Hewani",
+      "case-study": "Uchambuzi",
+      "competition": "Mashindano"
     }
   },
   "palette": {
