@@ -6,6 +6,7 @@
 - Replaced native language selects with theme-matched disclosures showing full language names and the active language. Preserve the current route, query, and anchor when switching languages; support keyboard focus, Escape, and outside-click dismissal.
 - Removed the hero's unexplained pause-symbol button and retained system reduced-motion support.
 - Added a shaded, dimensional map pin beside Dodoma, Tanzania.
+- Validation: lint and production build/type checks passed. Browser suite: 38 passed initially; one mobile-menu click check failed, then passed all three isolated reruns. Visually reviewed desktop/mobile header, language menu, footer, and location pin.
 
 ## Service motion and process journey (2026-11-15)
 
