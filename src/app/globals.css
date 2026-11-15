@@ -78,14 +78,17 @@ html[data-theme="dark"] .theme-icon--moon { opacity: 0; transform: rotate(40deg)
 .hero-scene { position: relative; height: 370px; min-width: 0; overflow: hidden; border: 1px solid var(--card-border); border-radius: 28px; perspective: 850px; background-image: linear-gradient(var(--hero-grid) 1px, transparent 1px), linear-gradient(90deg, var(--hero-grid) 1px, transparent 1px); background-size: 24px 24px; background-color: var(--soft-surface); }
 .hero-scene__label { position: absolute; top: 20px; left: 24px; color: var(--page-muted); font: .6rem var(--font-jetbrains-mono), monospace; letter-spacing: .12em; }
 .hero-scene__object { position: absolute; inset: 65px 10px 75px; display: flex; align-items: center; flex-direction: column; justify-content: center; gap: 35px; transform-style: preserve-3d; }
-.hero-wordmark { transform-style: preserve-3d; transform-origin: center; color: var(--mark-front); font-size: clamp(1.65rem, 3.1vw, 2.65rem); font-weight: 700; letter-spacing: -.055em; white-space: nowrap; text-shadow: 1px 1px var(--mark-depth), 2px 2px var(--mark-depth), 3px 3px var(--mark-depth), 4px 4px var(--mark-depth), 5px 5px var(--mark-depth), 6px 6px var(--mark-depth), 8px 12px 18px #0002; animation: identity-turn 9s ease-in-out infinite; }
+.hero-wordmark { transform-style: preserve-3d; transform-origin: center; color: var(--mark-front); font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 700; letter-spacing: -.035em; white-space: nowrap; text-shadow: 1px 1px var(--mark-depth), 2px 2px var(--mark-depth), 3px 3px var(--mark-depth), 4px 4px var(--mark-depth), 8px 12px 18px #0002; animation: identity-turn 9s ease-in-out infinite; }
 .hero-wordmark > span:first-child, .hero-wordmark > span:last-child { color: var(--accent); }
 .hero-wordmark__dot { color: var(--page-text); }
 .hero-gem { position: relative; width: 75px; height: 75px; transform-style: preserve-3d; transform: rotateX(-24deg) rotateY(35deg) rotateZ(5deg); animation: gem-float 9s ease-in-out infinite; }
-.hero-gem i { position: absolute; inset: 0; border: 1px solid var(--accent); background: linear-gradient(135deg, var(--accent), var(--mark-depth)); opacity: .85; }
+.hero-gem i { position: absolute; inset: 0; border: 1px solid var(--accent); background: linear-gradient(135deg, var(--accent), var(--mark-depth)); backface-visibility: hidden; }
 .hero-gem i:nth-child(1) { transform: translateZ(37.5px); }
 .hero-gem i:nth-child(2) { transform: rotateY(90deg) translateZ(37.5px); filter: brightness(.75); }
 .hero-gem i:nth-child(3) { transform: rotateX(90deg) translateZ(37.5px); filter: brightness(1.25); }
+.hero-gem i:nth-child(4) { transform: rotateY(-90deg) translateZ(37.5px); filter: brightness(.85); }
+.hero-gem i:nth-child(5) { transform: rotateX(-90deg) translateZ(37.5px); }
+.hero-gem i:nth-child(6) { transform: rotateY(180deg) translateZ(37.5px); }
 .hero-scene__orbit { position: absolute; width: 270px; height: 270px; top: 45px; left: calc(50% - 135px); border: 1px solid var(--card-border); border-radius: 50%; transform: rotateX(64deg) rotateZ(-20deg); }
 .hero-scene__foot { position: absolute; bottom: 23px; left: 24px; display: grid; gap: 6px; color: var(--page-muted); font: .58rem var(--font-jetbrains-mono), monospace; }
 .scene-control { position: absolute; bottom: 16px; right: 16px; width: 44px; height: 44px; border: 1px solid var(--card-border); border-radius: 50%; background: var(--card-surface); color: var(--accent); }
@@ -300,6 +303,9 @@ html[data-theme="dark"] .theme-icon--moon { opacity: 0; transform: rotate(40deg)
   .hero-gem i:nth-child(1) { transform: translateZ(27.5px); }
   .hero-gem i:nth-child(2) { transform: rotateY(90deg) translateZ(27.5px); }
   .hero-gem i:nth-child(3) { transform: rotateX(90deg) translateZ(27.5px); }
+  .hero-gem i:nth-child(4) { transform: rotateY(-90deg) translateZ(27.5px); }
+  .hero-gem i:nth-child(5) { transform: rotateX(-90deg) translateZ(27.5px); }
+  .hero-gem i:nth-child(6) { transform: rotateY(180deg) translateZ(27.5px); }
   .hero-scene__orbit { top: 10px; }
   .hero-scene__foot { bottom: 20px; left: 18px; font-size: .54rem; }
   .impact-strip { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 14px; padding-block: 17px; }

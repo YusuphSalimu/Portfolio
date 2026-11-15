@@ -25,8 +25,8 @@ export default function ProjectCard({
   return (
     <motion.div
       className={`project-grid__item${project.featured ? " project-grid__item--featured" : ""}`}
-      initial={reducedMotion ? false : { opacity: 0, y: 18 }}
-      whileInView={reducedMotion ? undefined : { opacity: 1, y: 0 }}
+      initial={reducedMotion ? false : { y: 18 }}
+      whileInView={reducedMotion ? undefined : { y: 0 }}
       whileHover={reducedMotion ? undefined : { y: -4 }}
       viewport={{ once: true, amount: 0.12 }}
       transition={{ duration: 0.35, delay: reducedMotion ? 0 : delay }}

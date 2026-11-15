@@ -1,5 +1,15 @@
 import { expect, test } from "@playwright/test";
 
+const pageErrors = new WeakMap<object, string[]>();
+test.beforeEach(async ({ page }) => {
+  const errors: string[] = [];
+  pageErrors.set(page, errors);
+  page.on("pageerror", (error) => errors.push(error.message));
+});
+test.afterEach(async ({ page }) => {
+  expect(pageErrors.get(page), "No runtime or hydration errors").toEqual([]);
+});
+
 test("all published projects can be filtered on the homepage", async ({ page }) => {
   await page.goto("/en");
   const projects = page.locator("#projects");
@@ -32,6 +42,7 @@ for (const scheme of ["light", "dark"] as const) {
     await page.emulateMedia({ colorScheme: scheme });
     await page.goto("/en");
     await expect(page.locator("html")).toHaveAttribute("data-theme", scheme);
+    await expect(page.locator(".hero-copy")).toHaveCSS("opacity", "1");
     const other = scheme === "light" ? "dark" : "light";
     await page.getByRole("button", { name: `Switch to ${other} mode` }).click();
     await expect(page.locator("html")).toHaveAttribute("data-theme", other);

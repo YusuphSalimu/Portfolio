@@ -29,7 +29,7 @@ export default function HeroIdentity() {
         <div className="hero-wordmark" aria-label="Yusuph.dev">
           <span aria-hidden="true">&lt;</span>Yusuph<span className="hero-wordmark__dot">.dev</span><span aria-hidden="true">/&gt;</span>
         </div>
-        <div className="hero-gem" aria-hidden="true"><i /><i /><i /></div>
+        <div className="hero-gem" aria-hidden="true"><i /><i /><i /><i /><i /><i /></div>
       </motion.div>
       <div className="hero-scene__foot"><span>{t("terminal.location")}</span><span>TypeScript / Next.js / Django</span></div>
       <button className="scene-control" type="button" aria-pressed={paused || !!reducedMotion}
