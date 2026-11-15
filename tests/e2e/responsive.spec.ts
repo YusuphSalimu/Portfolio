@@ -33,6 +33,9 @@ for (const width of widths) {
             "Zantan Mining Platform",
             "Ayaven Kids Events Hub",
             "Hardware Stores",
+            "Tanzania Stock Price Prediction",
+            "LeadPulse AI — B2B Lead Generation SaaS",
+            "Farm Management System",
           ]);
           if (width < 760) {
             await expect(page.locator('input[name="email"]')).toHaveCSS("font-size", "16px");
