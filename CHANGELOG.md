@@ -10,6 +10,8 @@
 - Created a matching vector Y identity, multi-resolution favicon, 96px search icon, and Apple touch icon. Refreshed Open Graph colors and social preview.
 - Fixed command-palette section navigation from project pages and added missing accessible section-heading IDs.
 - Added browser coverage for themes, blocked storage, contrast, hero motion, service navigation, project filtering, and favicon routes.
+- Kept reduced-motion state consistent during hydration while CSS honors the device preference immediately.
+- Validation: production build, lint, TypeScript, all 8 unit tests, all 8 project entries, and all 35 Playwright checks passed. Also checked 30 fresh mobile page loads for hydration errors.
 
 ## Phase 4 — Completion audit (2026-11-14)
 
